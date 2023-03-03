@@ -6,7 +6,8 @@
 
     Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
         Form1.Show()
-        Me.Close()
+        Me.Hide()
+
     End Sub
 
     Private Sub btnproduct_Click(sender As Object, e As EventArgs) Handles btnproduct.Click
