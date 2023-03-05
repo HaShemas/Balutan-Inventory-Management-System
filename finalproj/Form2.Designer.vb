@@ -34,7 +34,6 @@ Partial Class Form2
         Me.txtlname = New System.Windows.Forms.TextBox()
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.txtpass = New System.Windows.Forms.TextBox()
-        Me.txtType = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,8 +76,8 @@ Partial Class Form2
         '
         Me.cmbtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbtype.FormattingEnabled = True
-        Me.cmbtype.Items.AddRange(New Object() {"1", "2"})
-        Me.cmbtype.Location = New System.Drawing.Point(97, 215)
+        Me.cmbtype.Items.AddRange(New Object() {"Admin", "Warehouse User"})
+        Me.cmbtype.Location = New System.Drawing.Point(152, 225)
         Me.cmbtype.Name = "cmbtype"
         Me.cmbtype.Size = New System.Drawing.Size(121, 23)
         Me.cmbtype.TabIndex = 4
@@ -138,21 +137,11 @@ Partial Class Form2
         Me.txtpass.Size = New System.Drawing.Size(214, 23)
         Me.txtpass.TabIndex = 11
         '
-        'txtType
-        '
-        Me.txtType.AutoSize = True
-        Me.txtType.Location = New System.Drawing.Point(244, 218)
-        Me.txtType.Name = "txtType"
-        Me.txtType.Size = New System.Drawing.Size(29, 15)
-        Me.txtType.TabIndex = 12
-        Me.txtType.Text = "N/A"
-        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(429, 366)
-        Me.Controls.Add(Me.txtType)
         Me.Controls.Add(Me.txtpass)
         Me.Controls.Add(Me.txtuser)
         Me.Controls.Add(Me.txtlname)
@@ -184,5 +173,4 @@ Partial Class Form2
     Friend WithEvents txtlname As TextBox
     Friend WithEvents txtuser As TextBox
     Friend WithEvents txtpass As TextBox
-    Friend WithEvents txtType As Label
 End Class

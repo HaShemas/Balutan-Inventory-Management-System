@@ -11,6 +11,7 @@
     End Sub
 
     Private Sub btnproduct_Click(sender As Object, e As EventArgs) Handles btnproduct.Click
-
+        Form4.Show()
+        Me.Close()
     End Sub
 End Class

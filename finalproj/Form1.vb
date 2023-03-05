@@ -18,4 +18,8 @@
         Me.Close()
 
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MySQL_Open_Connection()
+    End Sub
 End Class

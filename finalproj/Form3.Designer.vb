@@ -28,6 +28,7 @@ Partial Class Form3
         Me.btnproduct = New System.Windows.Forms.Button()
         Me.btnlogout = New System.Windows.Forms.Button()
         Me.txtdate = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -59,7 +60,7 @@ Partial Class Form3
         '
         'btnproduct
         '
-        Me.btnproduct.Location = New System.Drawing.Point(12, 120)
+        Me.btnproduct.Location = New System.Drawing.Point(12, 118)
         Me.btnproduct.Name = "btnproduct"
         Me.btnproduct.Size = New System.Drawing.Size(75, 23)
         Me.btnproduct.TabIndex = 3
@@ -78,17 +79,27 @@ Partial Class Form3
         'txtdate
         '
         Me.txtdate.AutoSize = True
-        Me.txtdate.Location = New System.Drawing.Point(138, 73)
+        Me.txtdate.Location = New System.Drawing.Point(129, 73)
         Me.txtdate.Name = "txtdate"
         Me.txtdate.Size = New System.Drawing.Size(29, 15)
         Me.txtdate.TabIndex = 5
         Me.txtdate.Text = "N/A"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 147)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Sales"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(288, 240)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtdate)
         Me.Controls.Add(Me.btnlogout)
         Me.Controls.Add(Me.btnproduct)
@@ -108,4 +119,5 @@ Partial Class Form3
     Friend WithEvents btnproduct As Button
     Friend WithEvents btnlogout As Button
     Friend WithEvents txtdate As Label
+    Friend WithEvents Button1 As Button
 End Class

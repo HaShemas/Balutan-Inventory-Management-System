@@ -1,82 +1,82 @@
 ﻿
-Imports MySql.Data.MySqlClient
+'Imports MySql.Data.MySqlClient
 
-Module Module2
-    Dim mysqlAdapter As MySqlDataAdapter
+'Module Module2
+'    Dim mysqlAdapter As MySqlDataAdapter
 
-    Dim dataSet As DataSet
-
-
-    Public mysqlConn As New MySqlConnection("Server=localhost;
-
-                       Port=3306;
-
-                       Database=balutan;
-
-                       user=root;")
+'    Dim dataSet As DataSet
 
 
+'    Public mysqlConn As New MySqlConnection("Server=localhost;
 
-    Public Sub MySQL_Open_Connection()
+'                       Port=3306;
 
-        Try
+'                       Database=balutan;
 
-            If mysqlConn.State = ConnectionState.Closed Then
-
-                mysqlConn.Open()
-
-                MessageBox.Show("Connected")
-
-            End If
-
-        Catch ex As MySqlException
-
-            MessageBox.Show("Error: " & ex.Message)
+'                       user=root;")
 
 
-        End Try
 
-    End Sub
+'    Public Sub MySQL_Open_Connection()
 
+'        Try
 
-    Public Sub MySQL_Close_Connection()
+'            If mysqlConn.State = ConnectionState.Closed Then
 
-        Try
+'                mysqlConn.Open()
 
-            If mysqlConn.State = ConnectionState.Open Then
+'                MessageBox.Show("Connected")
 
-                mysqlConn.Close()
+'            End If
 
-            End If
+'        Catch ex As MySqlException
 
-        Catch ex As MySqlException
-
-            MessageBox.Show("Error: " & ex.Message)
+'            MessageBox.Show("Error: " & ex.Message)
 
 
-        End Try
+'        End Try
 
-    End Sub
+'    End Sub
 
-    Public Sub Insert_Data(ByVal fname As String, ByVal lname As String, ByVal user As String, ByVal pass As String, ByVal cbtype As Integer)
 
-        Try
+'    Public Sub MySQL_Close_Connection()
 
-            MySQL_Open_Connection()
+'        Try
 
-            dataSet = New DataSet
+'            If mysqlConn.State = ConnectionState.Open Then
 
-            mysqlAdapter = New MySqlDataAdapter("INSERT INTO user_tbl VALUES (null,'" & fname & "', '" & lname & "', '" & user & "', '" & pass & "', " & cbtype & ")", mysqlConn)
+'                mysqlConn.Close()
 
-            mysqlAdapter.Fill(dataSet, "user_tbl")
+'            End If
 
-            MessageBox.Show("Inserted")
+'        Catch ex As MySqlException
 
-        Catch ex As Exception
+'            MessageBox.Show("Error: " & ex.Message)
 
-            MessageBox.Show(ex.Message)
 
-        End Try
+'        End Try
 
-    End Sub
-End Module
+'    End Sub
+
+'    'Public Sub Insert_Data(ByVal fname As String, ByVal lname As String, ByVal user As String, ByVal pass As String, ByVal cbtype As Integer)
+
+'    '    Try
+
+'    '        MySQL_Open_Connection()
+
+'    '        dataSet = New DataSet
+
+'    '        mysqlAdapter = New MySqlDataAdapter("INSERT INTO user_tbl VALUES (null,'" & fname & "', '" & lname & "', '" & user & "', '" & pass & "', " & cbtype & ")", mysqlConn)
+
+'    '        mysqlAdapter.Fill(dataSet, "user_tbl")
+
+'    '        MessageBox.Show("Inserted")
+
+'    '    Catch ex As Exception
+
+'    '        MessageBox.Show(ex.Message)
+
+'    '    End Try
+
+'    'End Sub
+'End Module
