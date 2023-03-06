@@ -68,7 +68,7 @@ Module User_Mod
 
     End Sub
 
-    Public Sub Login(ByVal user As String, ByVal pass As String)
+    Public Sub Login_User(ByVal user As String, ByVal pass As String)
 
         Try
 
@@ -96,16 +96,28 @@ Module User_Mod
             'mysqlAdapter2 = New MySqlDataAdapter("SELECT user_tbl.user_id, product_tbl.product_id,product_tbl.pname,product_tbl.price,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM user_tbl INNER JOIN product_tbl ON user_tbl.user_id = product_tbl.user_id WHERE user_tbl.username='" & user & "' AND status='Active'", mysqlConn)
             'mysqlAdapter2.Fill(dataSet, "user_table")
             mysqlAdapter.Fill(table)
+            Dim cmd As New MySqlCommand("SELECT usertype_id FROM user_tbl WHERE Username=@username", mysqlConn)
+            cmd.Parameters.AddWithValue("@username", user)
+            Dim status As Integer = CInt(cmd.ExecuteScalar())
+            If status = 0 Then
 
-            If table.Rows.Count = 0 Then
-                MessageBox.Show("Invalid username or password!")
-                Form1.txtuser.Clear()
-                Form1.txtpass.Clear()
-            Else
-                MessageBox.Show("Logged In Successfully!")
-                Form3.Show()
-                Form1.Hide()
+                MessageBox.Show("Wrong")
+                Login.txtuser.Clear()
+                Login.txtpass.Clear()
+
+            ElseIf status > 0 Then
+
+                If table.Rows.Count < 0 Then
+                    MessageBox.Show("Invalid username or password!")
+                    Login.txtuser.Clear()
+                    Login.txtpass.Clear()
+                Else
+                    MessageBox.Show("Logged In Successfully!")
+                    Main.Show()
+                    Login.Hide()
+                End If
             End If
+
             'reader.Close()
             MySQL_Close_Connection()
         Catch ex As Exception
@@ -139,20 +151,22 @@ Module User_Mod
 
     Public Sub Dispay_User()
         Dim username As String
-        username = Form1.txtuser.Text
-        Dim query As String = "SELECT `user_id`,`username`,`fname`,`lname` FROM `user_tbl` WHERE username='" & username & "'"
+        username = Login.txtuser.Text
+        Dim query As String = "SELECT `user_id`,`username`,`fname`,`lname`,`usertype_id` FROM `user_tbl` WHERE username='" & username & "'"
         Dim command As New MySqlCommand(query, mysqlConn)
         Dim reader As MySqlDataReader = command.ExecuteReader()
 
         ' If the query returns data, assign it to the label control
         If reader.HasRows AndAlso reader.Read() Then
             Dim userId As Integer = reader.GetInt32(0)
-            Form5.txtusID.Text = userId.ToString()
+            Create_Prod.txtusID.Text = userId.ToString()
             'Form3.lblID.Text = Form5.txtusID.Text
-            Form3.lblID.Text = reader.GetInt16("user_id")
-            Form3.lbluser.Text = reader.GetString("username")
-            Form3.lblfname.Text = reader.GetString("fname")
-            Form3.lbllname.Text = reader.GetString("lname")
+
+            Main.lblID.Text = reader.GetInt16("user_id")
+            Main.lbluser.Text = reader.GetString("username")
+            Main.lblfname.Text = reader.GetString("fname")
+            Main.lbllname.Text = reader.GetString("lname")
+            Main.lblutype.Text = reader.GetInt16("usertype_id")
 
         End If
 
@@ -162,8 +176,68 @@ Module User_Mod
         MySQL_Close_Connection()
     End Sub
 
+    Public Sub Display_AllUsers()
+        Try
 
+            MySQL_Open_Connection()
 
+            dataSet = New DataSet
+
+            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM user_tbl WHERE usertype_id > 0", mysqlConn)
+
+            mysqlAdapter.Fill(dataSet, "user_tbl")
+
+            ' MessageBox.Show("Inserted")
+
+            Manage_User.dgvRecords4.DataSource = dataSet.Tables(0)
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
+    End Sub
+    Public Sub Update_User(ByVal fname As String, ByVal lname As String, ByVal user As String, ByVal pass As String, ByVal cbtype As Integer, ByVal uid As Integer)
+        Try
+
+            MySQL_Open_Connection()
+
+            dataSet = New DataSet
+
+            mysqlAdapter = New MySqlDataAdapter("UPDATE user_tbl SET username='" & user & "',password='" & pass & "',fname='" & fname & "',lname='" & lname & "',usertype_id=" & cbtype & " WHERE user_id=" & uid & "", mysqlConn)
+            mysqlAdapter.Fill(dataSet, "user_tbl")
+
+            MessageBox.Show("Updated Successfully!")
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
+
+    End Sub
+    Public Sub Delete_User(ByVal uid As Integer)
+
+        Try
+
+            MySQL_Open_Connection()
+
+            dataSet = New DataSet
+
+            mysqlAdapter = New MySqlDataAdapter("UPDATE user_tbl SET usertype_id = 0 WHERE user_id=" & uid & "", mysqlConn)
+
+            mysqlAdapter.Fill(dataSet, "user_tbl")
+
+            MessageBox.Show("Deleted")
+            Display_AllUsers()
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
+
+    End Sub
 End Module
 
 

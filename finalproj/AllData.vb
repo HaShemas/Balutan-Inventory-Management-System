@@ -1,6 +1,6 @@
-﻿Public Class Form6
+﻿Public Class AllData
     Private Sub btnmanage_Click(sender As Object, e As EventArgs) Handles btnmanage.Click
-        Form4.Show()
+        Product.Show()
         Me.Close()
     End Sub
 
@@ -10,21 +10,21 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Form2.Show()
+        Main.Show()
         Me.Close()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Form1.txtuser.Clear()
-        Form1.txtpass.Clear()
-        Form1.Show()
+        Login.txtuser.Clear()
+        Login.txtpass.Clear()
+        Login.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
 
     End Sub
 
     Private Sub btnrep_Click(sender As Object, e As EventArgs) Handles btnrep.Click
-        Form7.Show()
+        Report.Show()
         Me.Hide()
     End Sub
 End Class

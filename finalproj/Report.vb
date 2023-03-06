@@ -1,4 +1,4 @@
-﻿Public Class Form7
+﻿Public Class Report
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         Dim cat As String
         cat = cmbCat.SelectedItem
@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub btnbk_Click(sender As Object, e As EventArgs) Handles btnbk.Click
-        Form6.Show()
+        AllData.Show()
         Me.Close()
     End Sub
 End Class

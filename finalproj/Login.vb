@@ -1,11 +1,10 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class Form1
+﻿
+Public Class Login
     Private Sub btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
         Dim user, pass As String
         user = txtuser.Text
         pass = txtpass.Text
-        Login(user, pass)
+        User_Mod.Login_User(user, pass)
         If user = "" Then
             MessageBox.Show("Please enter username")
             txtuser.Focus()
@@ -18,7 +17,7 @@ Public Class Form1
     End Sub
 
     Private Sub Createlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Createlink.LinkClicked
-        Form2.Show()
+        Create_Acc.Show()
         Me.Hide()
         txtuser.Clear()
         txtpass.Clear()

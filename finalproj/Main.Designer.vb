@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbluser = New System.Windows.Forms.Label()
         Me.txtTime = New System.Windows.Forms.Label()
@@ -35,27 +35,28 @@ Partial Class Form3
         Me.lblID = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblutype = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(164, 11)
+        Me.Label1.Location = New System.Drawing.Point(172, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(180, 71)
+        Me.Label1.Size = New System.Drawing.Size(158, 71)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Hello and Welcome,"
+        Me.Label1.Text = "HELLO AND WELCOME"
         '
         'lbluser
         '
         Me.lbluser.AutoSize = True
         Me.lbluser.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbluser.Location = New System.Drawing.Point(49, 144)
+        Me.lbluser.Location = New System.Drawing.Point(44, 159)
         Me.lbluser.Name = "lbluser"
-        Me.lbluser.Size = New System.Drawing.Size(33, 17)
+        Me.lbluser.Size = New System.Drawing.Size(65, 17)
         Me.lbluser.TabIndex = 1
-        Me.lbluser.Text = "user"
+        Me.lbluser.Text = "username"
         '
         'txtTime
         '
@@ -70,7 +71,7 @@ Partial Class Form3
         'btnproduct
         '
         Me.btnproduct.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnproduct.Location = New System.Drawing.Point(25, 173)
+        Me.btnproduct.Location = New System.Drawing.Point(25, 196)
         Me.btnproduct.Name = "btnproduct"
         Me.btnproduct.Size = New System.Drawing.Size(75, 36)
         Me.btnproduct.TabIndex = 3
@@ -100,11 +101,11 @@ Partial Class Form3
         'btnmacc
         '
         Me.btnmacc.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnmacc.Location = New System.Drawing.Point(25, 215)
+        Me.btnmacc.Location = New System.Drawing.Point(25, 238)
         Me.btnmacc.Name = "btnmacc"
         Me.btnmacc.Size = New System.Drawing.Size(75, 44)
         Me.btnmacc.TabIndex = 6
-        Me.btnmacc.Text = "Manage" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Account"
+        Me.btnmacc.Text = "Manage" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Users"
         Me.btnmacc.UseVisualStyleBackColor = True
         '
         'lblfname
@@ -131,7 +132,7 @@ Partial Class Form3
         '
         Me.lblID.AutoSize = True
         Me.lblID.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblID.Location = New System.Drawing.Point(60, 127)
+        Me.lblID.Location = New System.Drawing.Point(51, 142)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(49, 17)
         Me.lblID.TabIndex = 9
@@ -150,17 +151,28 @@ Partial Class Form3
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 106)
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 128)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'Form3
+        'lblutype
+        '
+        Me.lblutype.AutoSize = True
+        Me.lblutype.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblutype.Location = New System.Drawing.Point(42, 176)
+        Me.lblutype.Name = "lblutype"
+        Me.lblutype.Size = New System.Drawing.Size(58, 17)
+        Me.lblutype.TabIndex = 13
+        Me.lblutype.Text = "usertype"
+        '
+        'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(356, 331)
+        Me.Controls.Add(Me.lblutype)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.lblID)
@@ -173,7 +185,7 @@ Partial Class Form3
         Me.Controls.Add(Me.txtTime)
         Me.Controls.Add(Me.lbluser)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form3"
+        Me.Name = "Main"
         Me.Text = "Form3"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -193,4 +205,5 @@ Partial Class Form3
     Friend WithEvents lblID As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblutype As Label
 End Class

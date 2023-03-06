@@ -1,12 +1,19 @@
 ﻿Imports Org.BouncyCastle.Asn1.Cms
 
-Public Class Form3
+Public Class Main
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MySQL_Open_Connection()
-        lbluser.Text = Form1.txtuser.Text
+        lbluser.Text = Login.txtuser.Text
         txtdate.Text = Date.Now.ToString("MMM/dd/yyyy")
         txtTime.Text = DateTime.Now.ToLongTimeString()
         Dispay_User()
+        If lblutype.Text = 1 Then
+            btnmacc.Visible = True
+            lblutype.Text = "Admin"
+        ElseIf lblutype.Text = 2 Then
+            btnmacc.Visible = False
+            lblutype.Text = "Warehouse User"
+        End If
         'If lbluser.Text = "Admin" Then
         '    btnmacc.Visible = True
         'ElseIf lbluser.Text = "Warehouse User" Then
@@ -15,19 +22,20 @@ Public Class Form3
     End Sub
 
     Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
-        Form1.txtuser.Clear()
-        Form1.txtpass.Clear()
-        Form1.Show()
+        Login.txtuser.Clear()
+        Login.txtpass.Clear()
+        Login.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
     End Sub
 
     Private Sub btnproduct_Click(sender As Object, e As EventArgs) Handles btnproduct.Click
-        Form6.Show()
+        AllData.Show()
         Me.Close()
     End Sub
 
     Private Sub btnmacc_Click(sender As Object, e As EventArgs) Handles btnmacc.Click
-
+        Manage_User.Show()
+        Me.Close()
     End Sub
 End Class

@@ -97,8 +97,8 @@ Module Module2
 
             'Form4.dgvRecords.DataSource = dataSet.Tables(0)
             Dim username, password As String
-            username = Form1.txtuser.Text
-            password = Form1.txtpass.Text
+            username = Login.txtuser.Text
+            password = Login.txtpass.Text
             command = New MySqlCommand("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
             user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.user_id = product_tbl.user_id AND user_tbl.username=@username AND 
             user_tbl.password=@password AND status='Active'", mysqlConn)
@@ -108,7 +108,7 @@ Module Module2
             mysqlAdapter = New MySqlDataAdapter(command)
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
-            Form4.dgvRecords.DataSource = dataSet.Tables(0)
+            Product.dgvRecords.DataSource = dataSet.Tables(0)
             ' Display the results in the form
 
 
@@ -137,7 +137,7 @@ Module Module2
 
             ' MessageBox.Show("Inserted")
 
-            Form4.dgvRecords.DataSource = dataSet.Tables(0)
+            Product.dgvRecords.DataSource = dataSet.Tables(0)
 
         Catch ex As Exception
 
@@ -159,7 +159,7 @@ Module Module2
 
             ' MessageBox.Show("Inserted")
 
-            Form6.dgvRecords2.DataSource = dataSet.Tables(0)
+            AllData.dgvRecords2.DataSource = dataSet.Tables(0)
 
         Catch ex As Exception
 
@@ -174,13 +174,13 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT ``pname,`cost`,`price` FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT `pname`,`cost`,`price` FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
             ' MessageBox.Show("Inserted")
 
-            Form7.dgvRecords3.DataSource = dataSet.Tables(0)
+            Report.dgvRecords3.DataSource = dataSet.Tables(0)
 
         Catch ex As Exception
 

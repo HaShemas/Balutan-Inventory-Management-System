@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form6
+Partial Class AllData
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -91,7 +91,7 @@ Partial Class Form6
         Me.btnrep.Text = "Report"
         Me.btnrep.UseVisualStyleBackColor = True
         '
-        'Form6
+        'AllData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -103,8 +103,9 @@ Partial Class Form6
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgvRecords2)
         Me.Controls.Add(Me.btnmanage)
-        Me.Name = "Form6"
-        Me.Text = "Form6"
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Name = "AllData"
+        Me.Text = "Balutan Products"
         CType(Me.dgvRecords2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

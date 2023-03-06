@@ -1,16 +1,16 @@
 ﻿
 
-Public Class Form4
+Public Class Product
 
     Public Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
-        Form5.Show()
+        Create_Prod.Show()
         Me.Close()
         'Me.Refresh()
 
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Form5.Show()
+        Create_Prod.Show()
         Me.Close()
         'Me.Refresh()
 
@@ -25,22 +25,22 @@ Public Class Form4
     Private Sub dgvRecords_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRecords.CellClick
         Dim rowIndex As Integer
         rowIndex = dgvRecords.CurrentRow.Index
-        Form5.txtpID.Text = dgvRecords.Rows(rowIndex).Cells(0).Value
-        Form5.txtpname.Text = dgvRecords.Rows(rowIndex).Cells(1).Value
-        Form5.txtdes.Text = dgvRecords.Rows(rowIndex).Cells(2).Value
-        Form5.txtsku.Text = dgvRecords.Rows(rowIndex).Cells(3).Value
-        Form5.txtsprice.Text = dgvRecords.Rows(rowIndex).Cells(4).Value
-        Form5.txtcost.Text = dgvRecords.Rows(rowIndex).Cells(5).Value
-        Form5.cmbcat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(6).Value
-        Form5.cmbintype.SelectedItem = dgvRecords.Rows(rowIndex).Cells(7).Value
-        Form5.cmbstat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(8).Value
-        Form5.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(9).Value
+        Create_Prod.txtpID.Text = dgvRecords.Rows(rowIndex).Cells(0).Value
+        Create_Prod.txtpname.Text = dgvRecords.Rows(rowIndex).Cells(1).Value
+        Create_Prod.txtdes.Text = dgvRecords.Rows(rowIndex).Cells(2).Value
+        Create_Prod.txtsku.Text = dgvRecords.Rows(rowIndex).Cells(3).Value
+        Create_Prod.txtsprice.Text = dgvRecords.Rows(rowIndex).Cells(4).Value
+        Create_Prod.txtcost.Text = dgvRecords.Rows(rowIndex).Cells(5).Value
+        Create_Prod.cmbcat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(6).Value
+        Create_Prod.cmbintype.SelectedItem = dgvRecords.Rows(rowIndex).Cells(7).Value
+        Create_Prod.cmbstat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(8).Value
+        Create_Prod.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(9).Value
 
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim id As Integer
-        id = Form5.txtpID.Text
+        id = Create_Prod.txtpID.Text
         Delete_Data(id)
 
     End Sub
@@ -56,14 +56,14 @@ Public Class Form4
     End Sub
 
     Private Sub btnvall_Click(sender As Object, e As EventArgs) Handles btnvall.Click
-        Form6.Show()
+        AllData.Show()
         Me.Hide()
     End Sub
 
     Private Sub BtnLog_Click(sender As Object, e As EventArgs) Handles BtnLog.Click
-        Form1.txtuser.Clear()
-        Form1.txtpass.Clear()
-        Form1.Show()
+        Login.txtuser.Clear()
+        Login.txtpass.Clear()
+        Login.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
 

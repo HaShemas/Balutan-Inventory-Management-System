@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Org.BouncyCastle.Crypto.Signers
 
-Public Class Form5
+Public Class Create_Prod
     Dim dataSet As DataSet
     Dim mysqlAdapter As MySqlDataAdapter
     Private Sub btncreate_Click(sender As Object, e As EventArgs) Handles btncreate.Click
@@ -19,12 +19,20 @@ Public Class Form5
         usid = txtusID.Text
         Insert_Data(pname, des, sku, sprice, cost, cat, intype, stats, usid)
 
-        Form4.Show()
-        Me.Close()
+        Product.Show()
+        Me.Hide()
+        txtdes.Clear()
+        txtsku.Clear()
+        txtcost.Clear()
+        txtpname.Clear()
+        txtsprice.Clear()
+        cmbcat.SelectedIndex = -1
+        cmbintype.SelectedIndex = -1
+        cmbstat.SelectedIndex = -1
     End Sub
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Form4.Show()
+        Product.Show()
         Me.Hide()
     End Sub
 
@@ -43,7 +51,7 @@ Public Class Form5
         stats = cmbstat.SelectedItem
 
         Update_Data(pname, des, sku, sprice, cost, cat, intype, stats, pid)
-        Form4.Show()
+        Product.Show()
         Me.Close()
     End Sub
 
