@@ -38,117 +38,131 @@ Partial Class Form5
         Me.btncancel = New System.Windows.Forms.Button()
         Me.btnupd = New System.Windows.Forms.Button()
         Me.txtusID = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtpID
         '
-        Me.txtpID.Location = New System.Drawing.Point(117, 30)
+        Me.txtpID.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtpID.Location = New System.Drawing.Point(53, 100)
         Me.txtpID.Name = "txtpID"
         Me.txtpID.ReadOnly = True
-        Me.txtpID.Size = New System.Drawing.Size(160, 23)
+        Me.txtpID.Size = New System.Drawing.Size(180, 26)
         Me.txtpID.TabIndex = 0
         '
         'txtpname
         '
-        Me.txtpname.Location = New System.Drawing.Point(117, 59)
+        Me.txtpname.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtpname.Location = New System.Drawing.Point(53, 151)
         Me.txtpname.Name = "txtpname"
-        Me.txtpname.Size = New System.Drawing.Size(160, 23)
+        Me.txtpname.Size = New System.Drawing.Size(180, 26)
         Me.txtpname.TabIndex = 1
         '
         'txtsprice
         '
-        Me.txtsprice.Location = New System.Drawing.Point(117, 88)
+        Me.txtsprice.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtsprice.Location = New System.Drawing.Point(53, 202)
         Me.txtsprice.Name = "txtsprice"
-        Me.txtsprice.Size = New System.Drawing.Size(160, 23)
+        Me.txtsprice.Size = New System.Drawing.Size(180, 26)
         Me.txtsprice.TabIndex = 2
         '
         'cmbcat
         '
         Me.cmbcat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbcat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbcat.FormattingEnabled = True
-        Me.cmbcat.Items.AddRange(New Object() {"Category 1", "Category 2"})
-        Me.cmbcat.Location = New System.Drawing.Point(117, 117)
+        Me.cmbcat.Items.AddRange(New Object() {"Protein", "Drinks"})
+        Me.cmbcat.Location = New System.Drawing.Point(53, 254)
         Me.cmbcat.Name = "cmbcat"
-        Me.cmbcat.Size = New System.Drawing.Size(160, 23)
+        Me.cmbcat.Size = New System.Drawing.Size(180, 27)
         Me.cmbcat.TabIndex = 3
         '
         'cmbstat
         '
         Me.cmbstat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbstat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbstat.FormattingEnabled = True
         Me.cmbstat.Items.AddRange(New Object() {"Active", "Inactive"})
-        Me.cmbstat.Location = New System.Drawing.Point(117, 175)
+        Me.cmbstat.Location = New System.Drawing.Point(53, 360)
         Me.cmbstat.Name = "cmbstat"
-        Me.cmbstat.Size = New System.Drawing.Size(160, 23)
+        Me.cmbstat.Size = New System.Drawing.Size(180, 27)
         Me.cmbstat.TabIndex = 4
         '
         'cmbintype
         '
         Me.cmbintype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbintype.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbintype.FormattingEnabled = True
         Me.cmbintype.Items.AddRange(New Object() {"Inventory", "Service"})
-        Me.cmbintype.Location = New System.Drawing.Point(117, 146)
+        Me.cmbintype.Location = New System.Drawing.Point(53, 306)
         Me.cmbintype.Name = "cmbintype"
-        Me.cmbintype.Size = New System.Drawing.Size(160, 23)
+        Me.cmbintype.Size = New System.Drawing.Size(180, 27)
         Me.cmbintype.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(45, 33)
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(53, 78)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 15)
+        Me.Label1.Size = New System.Drawing.Size(80, 19)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Product ID:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 62)
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(53, 129)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 15)
+        Me.Label2.Size = New System.Drawing.Size(101, 19)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Product Name:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(37, 91)
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(53, 180)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 15)
+        Me.Label3.Size = New System.Drawing.Size(86, 19)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Selling Price:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(53, 120)
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(53, 232)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(58, 15)
+        Me.Label4.Size = New System.Drawing.Size(68, 19)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Category:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(24, 149)
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(53, 284)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(87, 15)
+        Me.Label5.Size = New System.Drawing.Size(103, 19)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Inventory Type:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(69, 178)
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(53, 338)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 15)
+        Me.Label6.Size = New System.Drawing.Size(49, 19)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Status:"
         '
         'btncreate
         '
-        Me.btncreate.Location = New System.Drawing.Point(314, 53)
+        Me.btncreate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btncreate.Location = New System.Drawing.Point(53, 403)
         Me.btncreate.Name = "btncreate"
         Me.btncreate.Size = New System.Drawing.Size(77, 32)
         Me.btncreate.TabIndex = 12
@@ -157,7 +171,8 @@ Partial Class Form5
         '
         'btncancel
         '
-        Me.btncancel.Location = New System.Drawing.Point(149, 232)
+        Me.btncancel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btncancel.Location = New System.Drawing.Point(108, 455)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(77, 32)
         Me.btncancel.TabIndex = 13
@@ -166,7 +181,8 @@ Partial Class Form5
         '
         'btnupd
         '
-        Me.btnupd.Location = New System.Drawing.Point(314, 103)
+        Me.btnupd.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnupd.Location = New System.Drawing.Point(156, 403)
         Me.btnupd.Name = "btnupd"
         Me.btnupd.Size = New System.Drawing.Size(77, 32)
         Me.btnupd.TabIndex = 14
@@ -175,16 +191,30 @@ Partial Class Form5
         '
         'txtusID
         '
-        Me.txtusID.Location = New System.Drawing.Point(117, 203)
+        Me.txtusID.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtusID.Location = New System.Drawing.Point(53, 49)
         Me.txtusID.Name = "txtusID"
-        Me.txtusID.Size = New System.Drawing.Size(160, 23)
+        Me.txtusID.ReadOnly = True
+        Me.txtusID.Size = New System.Drawing.Size(180, 26)
         Me.txtusID.TabIndex = 15
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(53, 27)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(61, 19)
+        Me.Label7.TabIndex = 16
+        Me.Label7.Text = "User ID:"
         '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(403, 320)
+        Me.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.ClientSize = New System.Drawing.Size(297, 492)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtusID)
         Me.Controls.Add(Me.btnupd)
         Me.Controls.Add(Me.btncancel)
@@ -224,4 +254,5 @@ Partial Class Form5
     Friend WithEvents btncancel As Button
     Friend WithEvents btnupd As Button
     Friend WithEvents txtusID As TextBox
+    Friend WithEvents Label7 As Label
 End Class

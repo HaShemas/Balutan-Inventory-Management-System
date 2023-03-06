@@ -16,6 +16,11 @@
         End If
         Insert_User(fname, lname, user, pass, t)
         Form1.Show()
+        txtfname.Clear()
+        txtlname.Clear()
+        txtpass.Clear()
+        txtuser.Clear()
+        cmbtype.SelectedItem.Clear()
         Me.Hide()
     End Sub
 

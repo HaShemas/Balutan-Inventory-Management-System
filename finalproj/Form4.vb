@@ -5,12 +5,14 @@ Public Class Form4
     Public Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Form5.Show()
         Me.Close()
+        'Me.Refresh()
 
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Form5.Show()
         Me.Close()
+        'Me.Refresh()
 
     End Sub
 
@@ -35,7 +37,6 @@ Public Class Form4
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim id As Integer
-
         id = Form5.txtpID.Text
         Delete_Data(id)
 
@@ -45,5 +46,20 @@ Public Class Form4
         Dim id As Integer
         id = txtsID.Text
         Display_Search(id)
+    End Sub
+
+    Private Sub dgvRecords_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRecords.CellContentClick
+
+    End Sub
+
+    Private Sub btnvall_Click(sender As Object, e As EventArgs) Handles btnvall.Click
+        Form6.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub BtnLog_Click(sender As Object, e As EventArgs) Handles BtnLog.Click
+        Form1.Show()
+        Me.Close()
+        MessageBox.Show("Logged Out Successfully!")
     End Sub
 End Class

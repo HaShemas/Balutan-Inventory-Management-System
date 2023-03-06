@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports MySql.Data.MySqlClient
+Imports Mysqlx
 
 Module Module1
 
@@ -71,7 +73,22 @@ Module Module1
         Try
 
             MySQL_Open_Connection()
+            'Dim query As String = "SELECT  `username`, `password` FROM user_tbl WHERE username=@username AND password=@password"
+            'Dim cmd As New MySqlCommand(query, mysqlConn)
+            'cmd.Parameters.AddWithValue("@username", user)
+            'cmd.Parameters.AddWithValue("@password", pass)
 
+            'Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            'If reader.HasRows AndAlso reader.Read() Then
+            '    ' The query returned at least one row, so the user's account exists
+            '    MessageBox.Show("Login successful!")
+            '    Form3.Show()
+            '    Form1.Hide()
+            '    ' Proceed with authenticating the user
+            'Else
+            '    ' The query did not return any rows, so the user's account does not exist
+            '    MessageBox.Show("Invalid username or password.")
+            'End If
             Dim table As New DataTable()
 
             mysqlAdapter = New MySqlDataAdapter("SELECT  `username`, `password` FROM user_tbl WHERE username='" & user & "' AND password='" & pass & "'", mysqlConn)
@@ -82,10 +99,15 @@ Module Module1
 
             If table.Rows.Count = 0 Then
                 MessageBox.Show("Invalid username or password!")
+                Form1.txtuser.Clear()
+                Form2.txtpass.Clear()
             Else
                 MessageBox.Show("Logged In Successfully!")
+                Form3.Show()
+                Form1.Hide()
             End If
-
+            'reader.Close()
+            MySQL_Close_Connection()
         Catch ex As Exception
 
             MessageBox.Show(ex.Message)
@@ -101,7 +123,7 @@ Module Module1
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("INSERT INTO user_tbl VALUES (null,'" & fname & "', '" & lname & "', '" & user & "', '" & pass & "', " & cbtype & ")", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("INSERT INTO user_tbl VALUES (null,'" & user & "', '" & pass & "', '" & fname & "', '" & lname & "', " & cbtype & ")", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "user_tbl")
 
@@ -114,7 +136,7 @@ Module Module1
         End Try
 
     End Sub
-    Public Sub Insert_Data(ByVal pname As String, ByVal sprice As Double, ByVal cat As String, ByVal intype As String, ByVal stats As String, ByVal usid As String)
+    Public Sub Insert_Data(ByVal pname As String, ByVal sprice As Double, ByVal cat As String, ByVal intype As String, ByVal stats As String, ByVal usid As Integer)
 
         Try
 
@@ -122,8 +144,8 @@ Module Module1
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("INSERT INTO product_tbl VALUES (null,'" & pname & "', " & sprice & ", '" & cat & "', '" & intype & "', '" & stats & "', '" & usid & "' )", mysqlConn)
-            Dim rowIndex As Integer
+            mysqlAdapter = New MySqlDataAdapter("INSERT INTO product_tbl VALUES (null,'" & pname & "', " & sprice & ", '" & cat & "', '" & intype & "', '" & stats & "', " & usid & " )", mysqlConn)
+
 
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
@@ -172,6 +194,7 @@ Module Module1
 
             MessageBox.Show("Deleted")
             Display_Data()
+
         Catch ex As Exception
 
             MessageBox.Show(ex.Message)
@@ -185,7 +208,7 @@ Module Module1
             ''Login(user, pass)
             'MySQL_Open_Connection()
 
-            'dataSet = New DataSet
+            dataSet = New DataSet
 
             ''mysqlAdapter = New MySqlDataAdapter("SELECT * FROM `product_tbl` WHERE status = 'Active'", mysqlConn)
 
@@ -201,16 +224,16 @@ Module Module1
             username = Form1.txtuser.Text
             password = Form1.txtpass.Text
             command = New MySqlCommand("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.price,
-            product_tbl.category,product_tbl.type,product_tbl.status, product_tbl.user_id FROM product_tbl INNER JOIN
+            product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
             user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.username=@username AND 
             user_tbl.password=@password AND status='Active'", mysqlConn)
 
             command.Parameters.AddWithValue("@username", username) ' Replace with actual username
             command.Parameters.AddWithValue("@password", password) ' Replace with actual password
             mysqlAdapter = New MySqlDataAdapter(command)
-            mysqlAdapter.Fill(table)
+            mysqlAdapter.Fill(dataSet, "product_tbl")
 
-            Form4.dgvRecords.DataSource = table
+            Form4.dgvRecords.DataSource = dataSet.Tables(0)
             ' Display the results in the form
 
 
@@ -224,6 +247,30 @@ Module Module1
 
         End Try
 
+    End Sub
+    Public Sub Dispay_User()
+        Dim username As String
+        username = Form1.txtuser.Text
+        Dim query As String = "SELECT `user_id`,`username`,`fname`,`lname` FROM `user_tbl` WHERE username='" & username & "'"
+        Dim command As New MySqlCommand(query, mysqlConn)
+        Dim reader As MySqlDataReader = command.ExecuteReader()
+
+        ' If the query returns data, assign it to the label control
+        If reader.HasRows AndAlso reader.Read() Then
+            Dim userId As Integer = reader.GetInt32(0)
+            Form5.txtusID.Text = userId.ToString()
+            'Form3.lblID.Text = Form5.txtusID.Text
+            Form3.lblID.Text = reader.GetInt16("user_id")
+            Form3.lbluser.Text = reader.GetString("username")
+            Form3.lblfname.Text = reader.GetString("fname")
+            Form3.lbllname.Text = reader.GetString("lname")
+
+        End If
+
+        ' Close the connection and dispose of any resources used
+        reader.Close()
+        command.Dispose()
+        MySQL_Close_Connection()
     End Sub
     Public Sub Display_Search(ByVal id As Integer)
 
@@ -247,6 +294,27 @@ Module Module1
 
         End Try
 
+    End Sub
+    Public Sub Display_All()
+        Try
+
+            MySQL_Open_Connection()
+
+            dataSet = New DataSet
+
+            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM `product_tbl`", mysqlConn)
+
+            mysqlAdapter.Fill(dataSet, "product_tbl")
+
+            ' MessageBox.Show("Inserted")
+
+            Form6.dgvRecords2.DataSource = dataSet.Tables(0)
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
     End Sub
 End Module
 

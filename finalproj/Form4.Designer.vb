@@ -29,6 +29,7 @@ Partial Class Form4
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.BtnLog = New System.Windows.Forms.Button()
         Me.txtsID = New System.Windows.Forms.TextBox()
+        Me.btnvall = New System.Windows.Forms.Button()
         CType(Me.dgvRecords, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,6 +46,7 @@ Partial Class Form4
         '
         'btnSearch
         '
+        Me.btnSearch.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnSearch.Location = New System.Drawing.Point(12, 16)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(87, 31)
@@ -54,6 +56,7 @@ Partial Class Form4
         '
         'btnCreate
         '
+        Me.btnCreate.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnCreate.Location = New System.Drawing.Point(423, 16)
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.Size = New System.Drawing.Size(87, 31)
@@ -63,6 +66,7 @@ Partial Class Form4
         '
         'btnUpdate
         '
+        Me.btnUpdate.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnUpdate.Location = New System.Drawing.Point(516, 16)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(87, 31)
@@ -72,6 +76,7 @@ Partial Class Form4
         '
         'btnDelete
         '
+        Me.btnDelete.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnDelete.Location = New System.Drawing.Point(609, 16)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(87, 31)
@@ -81,6 +86,7 @@ Partial Class Form4
         '
         'BtnLog
         '
+        Me.BtnLog.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.BtnLog.Location = New System.Drawing.Point(609, 374)
         Me.BtnLog.Name = "BtnLog"
         Me.BtnLog.Size = New System.Drawing.Size(87, 32)
@@ -95,11 +101,23 @@ Partial Class Form4
         Me.txtsID.Size = New System.Drawing.Size(204, 23)
         Me.txtsID.TabIndex = 18
         '
+        'btnvall
+        '
+        Me.btnvall.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnvall.Location = New System.Drawing.Point(27, 374)
+        Me.btnvall.Name = "btnvall"
+        Me.btnvall.Size = New System.Drawing.Size(83, 32)
+        Me.btnvall.TabIndex = 19
+        Me.btnvall.Text = "View All"
+        Me.btnvall.UseVisualStyleBackColor = True
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(722, 423)
+        Me.Controls.Add(Me.btnvall)
         Me.Controls.Add(Me.txtsID)
         Me.Controls.Add(Me.BtnLog)
         Me.Controls.Add(Me.btnDelete)
@@ -122,4 +140,5 @@ Partial Class Form4
     Friend WithEvents btnDelete As Button
     Friend WithEvents BtnLog As Button
     Friend WithEvents txtsID As TextBox
+    Friend WithEvents btnvall As Button
 End Class

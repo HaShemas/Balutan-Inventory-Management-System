@@ -7,14 +7,12 @@ Public Class Form5
         Dim pname, cat, intype, stats As String
         Dim sprice As Double
         Dim usid As Integer
-
         pname = txtpname.Text
         sprice = txtsprice.Text
         cat = cmbcat.SelectedItem
         intype = cmbintype.SelectedItem
         stats = cmbstat.SelectedItem
         usid = txtusID.Text
-
         Insert_Data(pname, sprice, cat, intype, stats, usid)
 
         Form4.Show()
