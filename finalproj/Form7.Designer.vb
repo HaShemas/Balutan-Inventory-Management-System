@@ -25,12 +25,13 @@ Partial Class Form7
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.dgvRecords3 = New System.Windows.Forms.DataGridView()
         Me.cmbCat = New System.Windows.Forms.ComboBox()
+        Me.btnbk = New System.Windows.Forms.Button()
         CType(Me.dgvRecords3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(289, 27)
+        Me.btnEnter.Location = New System.Drawing.Point(238, 25)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(79, 35)
         Me.btnEnter.TabIndex = 0
@@ -54,10 +55,19 @@ Partial Class Form7
         Me.cmbCat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbCat.FormattingEnabled = True
         Me.cmbCat.Items.AddRange(New Object() {"Protein", "Drinks"})
-        Me.cmbCat.Location = New System.Drawing.Point(103, 31)
+        Me.cmbCat.Location = New System.Drawing.Point(52, 29)
         Me.cmbCat.Name = "cmbCat"
         Me.cmbCat.Size = New System.Drawing.Size(180, 27)
         Me.cmbCat.TabIndex = 15
+        '
+        'btnbk
+        '
+        Me.btnbk.Location = New System.Drawing.Point(323, 25)
+        Me.btnbk.Name = "btnbk"
+        Me.btnbk.Size = New System.Drawing.Size(79, 35)
+        Me.btnbk.TabIndex = 16
+        Me.btnbk.Text = "Back"
+        Me.btnbk.UseVisualStyleBackColor = True
         '
         'Form7
         '
@@ -65,6 +75,7 @@ Partial Class Form7
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(460, 318)
+        Me.Controls.Add(Me.btnbk)
         Me.Controls.Add(Me.cmbCat)
         Me.Controls.Add(Me.dgvRecords3)
         Me.Controls.Add(Me.btnEnter)
@@ -78,4 +89,5 @@ Partial Class Form7
     Friend WithEvents btnEnter As Button
     Friend WithEvents dgvRecords3 As DataGridView
     Friend WithEvents cmbCat As ComboBox
+    Friend WithEvents btnbk As Button
 End Class

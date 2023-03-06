@@ -10,5 +10,8 @@
 
     End Sub
 
-
+    Private Sub btnbk_Click(sender As Object, e As EventArgs) Handles btnbk.Click
+        Form6.Show()
+        Me.Close()
+    End Sub
 End Class
