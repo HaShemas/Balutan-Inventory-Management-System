@@ -39,6 +39,12 @@ Partial Class Form5
         Me.btnupd = New System.Windows.Forms.Button()
         Me.txtusID = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtdes = New System.Windows.Forms.TextBox()
+        Me.txtsku = New System.Windows.Forms.TextBox()
+        Me.txtcost = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtpID
@@ -61,7 +67,7 @@ Partial Class Form5
         'txtsprice
         '
         Me.txtsprice.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtsprice.Location = New System.Drawing.Point(53, 202)
+        Me.txtsprice.Location = New System.Drawing.Point(268, 173)
         Me.txtsprice.Name = "txtsprice"
         Me.txtsprice.Size = New System.Drawing.Size(180, 26)
         Me.txtsprice.TabIndex = 2
@@ -72,7 +78,7 @@ Partial Class Form5
         Me.cmbcat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbcat.FormattingEnabled = True
         Me.cmbcat.Items.AddRange(New Object() {"Protein", "Drinks"})
-        Me.cmbcat.Location = New System.Drawing.Point(53, 254)
+        Me.cmbcat.Location = New System.Drawing.Point(53, 198)
         Me.cmbcat.Name = "cmbcat"
         Me.cmbcat.Size = New System.Drawing.Size(180, 27)
         Me.cmbcat.TabIndex = 3
@@ -83,7 +89,7 @@ Partial Class Form5
         Me.cmbstat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbstat.FormattingEnabled = True
         Me.cmbstat.Items.AddRange(New Object() {"Active", "Inactive"})
-        Me.cmbstat.Location = New System.Drawing.Point(53, 360)
+        Me.cmbstat.Location = New System.Drawing.Point(53, 304)
         Me.cmbstat.Name = "cmbstat"
         Me.cmbstat.Size = New System.Drawing.Size(180, 27)
         Me.cmbstat.TabIndex = 4
@@ -94,7 +100,7 @@ Partial Class Form5
         Me.cmbintype.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbintype.FormattingEnabled = True
         Me.cmbintype.Items.AddRange(New Object() {"Inventory", "Service"})
-        Me.cmbintype.Location = New System.Drawing.Point(53, 306)
+        Me.cmbintype.Location = New System.Drawing.Point(53, 250)
         Me.cmbintype.Name = "cmbintype"
         Me.cmbintype.Size = New System.Drawing.Size(180, 27)
         Me.cmbintype.TabIndex = 5
@@ -123,7 +129,7 @@ Partial Class Form5
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(53, 180)
+        Me.Label3.Location = New System.Drawing.Point(268, 151)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 19)
         Me.Label3.TabIndex = 8
@@ -133,7 +139,7 @@ Partial Class Form5
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(53, 232)
+        Me.Label4.Location = New System.Drawing.Point(53, 176)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 19)
         Me.Label4.TabIndex = 9
@@ -143,7 +149,7 @@ Partial Class Form5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(53, 284)
+        Me.Label5.Location = New System.Drawing.Point(53, 228)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(103, 19)
         Me.Label5.TabIndex = 10
@@ -153,7 +159,7 @@ Partial Class Form5
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(53, 338)
+        Me.Label6.Location = New System.Drawing.Point(53, 282)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 19)
         Me.Label6.TabIndex = 11
@@ -162,7 +168,7 @@ Partial Class Form5
         'btncreate
         '
         Me.btncreate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btncreate.Location = New System.Drawing.Point(53, 403)
+        Me.btncreate.Location = New System.Drawing.Point(112, 379)
         Me.btncreate.Name = "btncreate"
         Me.btncreate.Size = New System.Drawing.Size(77, 32)
         Me.btncreate.TabIndex = 12
@@ -172,7 +178,7 @@ Partial Class Form5
         'btncancel
         '
         Me.btncancel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btncancel.Location = New System.Drawing.Point(108, 455)
+        Me.btncancel.Location = New System.Drawing.Point(202, 448)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(77, 32)
         Me.btncancel.TabIndex = 13
@@ -182,7 +188,7 @@ Partial Class Form5
         'btnupd
         '
         Me.btnupd.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnupd.Location = New System.Drawing.Point(156, 403)
+        Me.btnupd.Location = New System.Drawing.Point(305, 379)
         Me.btnupd.Name = "btnupd"
         Me.btnupd.Size = New System.Drawing.Size(77, 32)
         Me.btnupd.TabIndex = 14
@@ -208,12 +214,72 @@ Partial Class Form5
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "User ID:"
         '
+        'txtdes
+        '
+        Me.txtdes.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtdes.Location = New System.Drawing.Point(264, 49)
+        Me.txtdes.Name = "txtdes"
+        Me.txtdes.Size = New System.Drawing.Size(180, 26)
+        Me.txtdes.TabIndex = 17
+        '
+        'txtsku
+        '
+        Me.txtsku.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtsku.Location = New System.Drawing.Point(268, 111)
+        Me.txtsku.Name = "txtsku"
+        Me.txtsku.Size = New System.Drawing.Size(180, 26)
+        Me.txtsku.TabIndex = 18
+        '
+        'txtcost
+        '
+        Me.txtcost.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtcost.Location = New System.Drawing.Point(268, 232)
+        Me.txtcost.Name = "txtcost"
+        Me.txtcost.Size = New System.Drawing.Size(180, 26)
+        Me.txtcost.TabIndex = 19
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(264, 27)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(81, 19)
+        Me.Label8.TabIndex = 20
+        Me.Label8.Text = "Description:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.Location = New System.Drawing.Point(268, 89)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(44, 19)
+        Me.Label9.TabIndex = 21
+        Me.Label9.Text = "SKU:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label10.Location = New System.Drawing.Point(268, 206)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(41, 19)
+        Me.Label10.TabIndex = 22
+        Me.Label10.Text = "Cost:"
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.ClientSize = New System.Drawing.Size(297, 492)
+        Me.ClientSize = New System.Drawing.Size(486, 492)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.txtcost)
+        Me.Controls.Add(Me.txtsku)
+        Me.Controls.Add(Me.txtdes)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtusID)
         Me.Controls.Add(Me.btnupd)
@@ -255,4 +321,10 @@ Partial Class Form5
     Friend WithEvents btnupd As Button
     Friend WithEvents txtusID As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents txtdes As TextBox
+    Friend WithEvents txtsku As TextBox
+    Friend WithEvents txtcost As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
 End Class

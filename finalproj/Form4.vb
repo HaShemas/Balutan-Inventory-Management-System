@@ -27,11 +27,14 @@ Public Class Form4
         rowIndex = dgvRecords.CurrentRow.Index
         Form5.txtpID.Text = dgvRecords.Rows(rowIndex).Cells(0).Value
         Form5.txtpname.Text = dgvRecords.Rows(rowIndex).Cells(1).Value
-        Form5.txtsprice.Text = dgvRecords.Rows(rowIndex).Cells(2).Value
-        Form5.cmbcat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(3).Value
-        Form5.cmbintype.SelectedItem = dgvRecords.Rows(rowIndex).Cells(4).Value
-        Form5.cmbstat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(5).Value
-        Form5.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(6).Value
+        Form5.txtdes.Text = dgvRecords.Rows(rowIndex).Cells(2).Value
+        Form5.txtsku.Text = dgvRecords.Rows(rowIndex).Cells(3).Value
+        Form5.txtsprice.Text = dgvRecords.Rows(rowIndex).Cells(4).Value
+        Form5.txtcost.Text = dgvRecords.Rows(rowIndex).Cells(5).Value
+        Form5.cmbcat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(6).Value
+        Form5.cmbintype.SelectedItem = dgvRecords.Rows(rowIndex).Cells(7).Value
+        Form5.cmbstat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(8).Value
+        Form5.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(9).Value
 
     End Sub
 
@@ -61,5 +64,7 @@ Public Class Form4
         Form1.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
+        Form1.txtuser.Clear()
+        Form1.txtpass.Clear()
     End Sub
 End Class

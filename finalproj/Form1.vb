@@ -20,7 +20,8 @@ Public Class Form1
     Private Sub Createlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Createlink.LinkClicked
         Form2.Show()
         Me.Hide()
-
+        txtuser.Clear()
+        txtpass.Clear()
     End Sub
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click

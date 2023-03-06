@@ -18,7 +18,7 @@ Module Module1
 
                        Port=3306;
 
-                       Database=balutan;
+                       Database=balutan2;
 
                        user=root;")
 
@@ -100,7 +100,7 @@ Module Module1
             If table.Rows.Count = 0 Then
                 MessageBox.Show("Invalid username or password!")
                 Form1.txtuser.Clear()
-                Form2.txtpass.Clear()
+                Form1.txtpass.Clear()
             Else
                 MessageBox.Show("Logged In Successfully!")
                 Form3.Show()
@@ -136,7 +136,7 @@ Module Module1
         End Try
 
     End Sub
-    Public Sub Insert_Data(ByVal pname As String, ByVal sprice As Double, ByVal cat As String, ByVal intype As String, ByVal stats As String, ByVal usid As Integer)
+    Public Sub Insert_Data(ByVal pname As String, ByVal des As String, ByVal sku As String, ByVal sprice As Double, ByVal cost As Double, ByVal cat As String, ByVal intype As String, ByVal stats As String, ByVal usid As Integer)
 
         Try
 
@@ -144,7 +144,7 @@ Module Module1
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("INSERT INTO product_tbl VALUES (null,'" & pname & "', " & sprice & ", '" & cat & "', '" & intype & "', '" & stats & "', " & usid & " )", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("INSERT INTO product_tbl VALUES (null,'" & pname & "', '" & des & "', '" & sku & "', " & sprice & ", " & cost & ", '" & cat & "', '" & intype & "', '" & stats & "', " & usid & " )", mysqlConn)
 
 
 
@@ -223,9 +223,8 @@ Module Module1
             Dim username, password As String
             username = Form1.txtuser.Text
             password = Form1.txtpass.Text
-            command = New MySqlCommand("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.price,
-            product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
-            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.username=@username AND 
+            command = New MySqlCommand("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
+            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.user_id = product_tbl.user_id AND user_tbl.username=@username AND 
             user_tbl.password=@password AND status='Active'", mysqlConn)
 
             command.Parameters.AddWithValue("@username", username) ' Replace with actual username

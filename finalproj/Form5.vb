@@ -1,19 +1,23 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Org.BouncyCastle.Crypto.Signers
 
 Public Class Form5
     Dim dataSet As DataSet
     Dim mysqlAdapter As MySqlDataAdapter
     Private Sub btncreate_Click(sender As Object, e As EventArgs) Handles btncreate.Click
-        Dim pname, cat, intype, stats As String
-        Dim sprice As Double
+        Dim pname, cat, intype, stats, des, sku As String
+        Dim sprice, cost As Double
         Dim usid As Integer
+        des = txtdes.Text
+        sku = txtsku.Text
+        cost = txtcost.Text
         pname = txtpname.Text
         sprice = txtsprice.Text
         cat = cmbcat.SelectedItem
         intype = cmbintype.SelectedItem
         stats = cmbstat.SelectedItem
         usid = txtusID.Text
-        Insert_Data(pname, sprice, cat, intype, stats, usid)
+        Insert_Data(pname, des, sku, sprice, cost, cat, intype, stats, usid)
 
         Form4.Show()
         Me.Close()

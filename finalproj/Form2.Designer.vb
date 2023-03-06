@@ -82,9 +82,9 @@ Partial Class Form2
         Me.cmbtype.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbtype.FormattingEnabled = True
         Me.cmbtype.Items.AddRange(New Object() {"Admin", "Warehouse User"})
-        Me.cmbtype.Location = New System.Drawing.Point(115, 266)
+        Me.cmbtype.Location = New System.Drawing.Point(111, 267)
         Me.cmbtype.Name = "cmbtype"
-        Me.cmbtype.Size = New System.Drawing.Size(121, 27)
+        Me.cmbtype.Size = New System.Drawing.Size(142, 27)
         Me.cmbtype.TabIndex = 4
         '
         'btncreate

@@ -20,7 +20,7 @@
         txtlname.Clear()
         txtpass.Clear()
         txtuser.Clear()
-        cmbtype.SelectedItem.Clear()
+        cmbtype.Items.Clear()
         Me.Hide()
     End Sub
 
