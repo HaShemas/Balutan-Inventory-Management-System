@@ -61,10 +61,11 @@ Public Class Form4
     End Sub
 
     Private Sub BtnLog_Click(sender As Object, e As EventArgs) Handles BtnLog.Click
+        Form1.txtuser.Clear()
+        Form1.txtpass.Clear()
         Form1.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
-        Form1.txtuser.Clear()
-        Form1.txtpass.Clear()
+
     End Sub
 End Class

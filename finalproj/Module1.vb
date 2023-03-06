@@ -159,7 +159,7 @@ Module Module1
         End Try
 
     End Sub
-    Public Sub Update_Data(ByVal pname As String, ByVal sprice As Double, ByVal cat As String, ByVal intype As String, ByVal stats As String, ByVal pid As Integer)
+    Public Sub Update_Data(ByVal pname As String, ByVal des As String, ByVal sku As String, ByVal sprice As Double, ByVal cost As Double, ByVal cat As String, ByVal intype As String, ByVal stats As String, ByVal usid As Integer)
 
         Try
 
@@ -167,7 +167,7 @@ Module Module1
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET pname='" & pname & "', price=" & sprice & ", category='" & cat & "', type='" & intype & "', status='" & stats & "' WHERE product_id=" & pid & "", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET pname='" & pname & "',des='" & des & "',des='" & sku & "', price=" & sprice & ",cost=" & cost & ", category='" & cat & "', type='" & intype & "', status='" & stats & "' WHERE product_id=" & usid & "", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 

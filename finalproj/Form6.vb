@@ -15,8 +15,11 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form1.txtuser.Clear()
+        Form1.txtpass.Clear()
         Form1.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
+
     End Sub
 End Class

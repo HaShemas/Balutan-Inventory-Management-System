@@ -20,5 +20,7 @@ Public Class Form3
         Me.Close()
     End Sub
 
+    Private Sub btnmacc_Click(sender As Object, e As EventArgs) Handles btnmacc.Click
 
+    End Sub
 End Class

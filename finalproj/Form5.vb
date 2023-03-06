@@ -29,10 +29,12 @@ Public Class Form5
     End Sub
 
     Private Sub btnupd_Click(sender As Object, e As EventArgs) Handles btnupd.Click
-        Dim pname, cat, intype, stats As String
-        Dim sprice As Double
+        Dim pname, cat, intype, stats, sku, des As String
+        Dim sprice, cost As Double
         Dim pid As Integer
-
+        des = txtdes.Text
+        sku = txtsku.Text
+        cost = txtcost.Text
         pid = txtpID.Text
         pname = txtpname.Text
         sprice = txtsprice.Text
@@ -40,9 +42,9 @@ Public Class Form5
         intype = cmbintype.SelectedItem
         stats = cmbstat.SelectedItem
 
-        Update_Data(pname, sprice, cat, intype, stats, pid)
+        Update_Data(pname, des, sku, sprice, cost, cat, intype, stats, pid)
         Form4.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
