@@ -7,9 +7,16 @@ Public Class Form3
         txtdate.Text = Date.Now.ToString("MMM/dd/yyyy")
         txtTime.Text = DateTime.Now.ToLongTimeString()
         Dispay_User()
+        'If lbluser.Text = "Admin" Then
+        '    btnmacc.Visible = True
+        'ElseIf lbluser.Text = "Warehouse User" Then
+        '    btnmacc.Visible = False
+        'End If
     End Sub
 
     Private Sub btnlogout_Click(sender As Object, e As EventArgs) Handles btnlogout.Click
+        Form1.txtuser.Clear()
+        Form1.txtpass.Clear()
         Form1.Show()
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")

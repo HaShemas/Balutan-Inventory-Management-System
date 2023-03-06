@@ -27,6 +27,7 @@ Partial Class Form6
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnrep = New System.Windows.Forms.Button()
         CType(Me.dgvRecords2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,7 +49,7 @@ Partial Class Form6
         Me.dgvRecords2.Name = "dgvRecords2"
         Me.dgvRecords2.RowTemplate.Height = 25
         Me.dgvRecords2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRecords2.Size = New System.Drawing.Size(735, 279)
+        Me.dgvRecords2.Size = New System.Drawing.Size(764, 279)
         Me.dgvRecords2.TabIndex = 13
         '
         'Label1
@@ -80,12 +81,23 @@ Partial Class Form6
         Me.Button2.Text = "Logout"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'btnrep
+        '
+        Me.btnrep.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnrep.Location = New System.Drawing.Point(702, 53)
+        Me.btnrep.Name = "btnrep"
+        Me.btnrep.Size = New System.Drawing.Size(74, 33)
+        Me.btnrep.TabIndex = 17
+        Me.btnrep.Text = "Report"
+        Me.btnrep.UseVisualStyleBackColor = True
+        '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnrep)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -103,4 +115,5 @@ Partial Class Form6
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents btnrep As Button
 End Class

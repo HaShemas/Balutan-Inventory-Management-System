@@ -227,8 +227,8 @@ Module Module1
             user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.user_id = product_tbl.user_id AND user_tbl.username=@username AND 
             user_tbl.password=@password AND status='Active'", mysqlConn)
 
-            command.Parameters.AddWithValue("@username", username) ' Replace with actual username
-            command.Parameters.AddWithValue("@password", password) ' Replace with actual password
+            command.Parameters.AddWithValue("@username", username)
+            command.Parameters.AddWithValue("@password", password)
             mysqlAdapter = New MySqlDataAdapter(command)
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -301,7 +301,7 @@ Module Module1
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM `product_tbl`", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.*,user_tbl.username FROM `product_tbl` INNER JOIN user_tbl ON product_tbl.user_id = user_tbl.user_id ", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -315,6 +315,28 @@ Module Module1
 
         End Try
     End Sub
+    Public Sub Display_Cat(ByVal cat As String)
+        Try
+
+            MySQL_Open_Connection()
+
+            dataSet = New DataSet
+
+            mysqlAdapter = New MySqlDataAdapter("SELECT ``pname,`cost`,`price` FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
+
+            mysqlAdapter.Fill(dataSet, "product_tbl")
+
+            ' MessageBox.Show("Inserted")
+
+            Form7.dgvRecords3.DataSource = dataSet.Tables(0)
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
+    End Sub
+
 End Module
 
 

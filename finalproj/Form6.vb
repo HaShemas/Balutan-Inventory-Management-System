@@ -22,4 +22,9 @@
         MessageBox.Show("Logged Out Successfully!")
 
     End Sub
+
+    Private Sub btnrep_Click(sender As Object, e As EventArgs) Handles btnrep.Click
+        Form7.Show()
+        Me.Hide()
+    End Sub
 End Class

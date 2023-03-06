@@ -61,7 +61,7 @@ Partial Class Form3
         '
         Me.txtTime.AutoSize = True
         Me.txtTime.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtTime.Location = New System.Drawing.Point(164, 144)
+        Me.txtTime.Location = New System.Drawing.Point(147, 144)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.Size = New System.Drawing.Size(37, 17)
         Me.txtTime.TabIndex = 2
@@ -91,7 +91,7 @@ Partial Class Form3
         '
         Me.txtdate.AutoSize = True
         Me.txtdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtdate.Location = New System.Drawing.Point(262, 144)
+        Me.txtdate.Location = New System.Drawing.Point(249, 144)
         Me.txtdate.Name = "txtdate"
         Me.txtdate.Size = New System.Drawing.Size(37, 17)
         Me.txtdate.TabIndex = 5
