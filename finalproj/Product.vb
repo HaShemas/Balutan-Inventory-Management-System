@@ -10,6 +10,7 @@ Public Class Product
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Create_Prod.txtsku.ReadOnly = True
         Create_Prod.Show()
         Me.Close()
         'Me.Refresh()
