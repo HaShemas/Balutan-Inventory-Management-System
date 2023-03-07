@@ -88,7 +88,7 @@ Partial Class Create_Prod
         Me.cmbstat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbstat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbstat.FormattingEnabled = True
-        Me.cmbstat.Items.AddRange(New Object() {"Active", "Inactive"})
+        Me.cmbstat.Items.AddRange(New Object() {"Active", "Inactive", "Disabled"})
         Me.cmbstat.Location = New System.Drawing.Point(53, 304)
         Me.cmbstat.Name = "cmbstat"
         Me.cmbstat.Size = New System.Drawing.Size(180, 27)
@@ -168,7 +168,7 @@ Partial Class Create_Prod
         'btncreate
         '
         Me.btncreate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btncreate.Location = New System.Drawing.Point(112, 379)
+        Me.btncreate.Location = New System.Drawing.Point(118, 379)
         Me.btncreate.Name = "btncreate"
         Me.btncreate.Size = New System.Drawing.Size(77, 32)
         Me.btncreate.TabIndex = 12
@@ -178,7 +178,7 @@ Partial Class Create_Prod
         'btncancel
         '
         Me.btncancel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btncancel.Location = New System.Drawing.Point(202, 448)
+        Me.btncancel.Location = New System.Drawing.Point(264, 379)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(77, 32)
         Me.btncancel.TabIndex = 13
@@ -188,7 +188,7 @@ Partial Class Create_Prod
         'btnupd
         '
         Me.btnupd.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnupd.Location = New System.Drawing.Point(305, 379)
+        Me.btnupd.Location = New System.Drawing.Point(118, 379)
         Me.btnupd.Name = "btnupd"
         Me.btnupd.Size = New System.Drawing.Size(77, 32)
         Me.btnupd.TabIndex = 14
@@ -268,7 +268,7 @@ Partial Class Create_Prod
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Cost:"
         '
-        'Form5
+        'Create_Prod
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -297,7 +297,7 @@ Partial Class Create_Prod
         Me.Controls.Add(Me.txtsprice)
         Me.Controls.Add(Me.txtpname)
         Me.Controls.Add(Me.txtpID)
-        Me.Name = "Form5"
+        Me.Name = "Create_Prod"
         Me.Text = "Form5"
         Me.ResumeLayout(False)
         Me.PerformLayout()

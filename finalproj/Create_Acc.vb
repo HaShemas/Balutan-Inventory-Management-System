@@ -17,7 +17,7 @@ Public Class Create_Acc
             t = type
         End If
         Insert_User(fname, lname, user, pass, t)
-        Login.Show()
+        Manage_User.Show()
         txtfname.Clear()
         txtlname.Clear()
         txtpass.Clear()
@@ -39,7 +39,7 @@ Public Class Create_Acc
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
         Manage_User.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -68,7 +68,7 @@ Public Class Create_Acc
         '    cmbtype.Text = "Warehouse Manager"
         'End If
         type = cmbtype.Text
-        Update_User(user, pass, fname, lname, t, uid)
+        Update_User(fname, lname, user, pass, t, uid)
         Manage_User.Show()
         txtfname.Clear()
         txtlname.Clear()

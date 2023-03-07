@@ -104,7 +104,7 @@ Partial Class Create_Acc
         'btncancel
         '
         Me.btncancel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btncancel.Location = New System.Drawing.Point(142, 391)
+        Me.btncancel.Location = New System.Drawing.Point(200, 352)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(75, 35)
         Me.btncancel.TabIndex = 6
@@ -115,11 +115,11 @@ Partial Class Create_Acc
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(86, 9)
+        Me.Label5.Location = New System.Drawing.Point(131, 9)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(195, 31)
+        Me.Label5.Size = New System.Drawing.Size(110, 31)
         Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Create Account"
+        Me.Label5.Text = "Account"
         '
         'txtfname
         '
@@ -157,7 +157,7 @@ Partial Class Create_Acc
         'btnupd
         '
         Me.btnupd.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnupd.Location = New System.Drawing.Point(215, 352)
+        Me.btnupd.Location = New System.Drawing.Point(73, 350)
         Me.btnupd.Name = "btnupd"
         Me.btnupd.Size = New System.Drawing.Size(75, 35)
         Me.btnupd.TabIndex = 12

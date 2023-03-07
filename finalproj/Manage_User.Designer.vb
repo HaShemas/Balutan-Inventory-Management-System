@@ -40,13 +40,13 @@ Partial Class Manage_User
         Me.dgvRecords4.Name = "dgvRecords4"
         Me.dgvRecords4.RowTemplate.Height = 25
         Me.dgvRecords4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRecords4.Size = New System.Drawing.Size(658, 279)
+        Me.dgvRecords4.Size = New System.Drawing.Size(648, 279)
         Me.dgvRecords4.TabIndex = 14
         '
         'btnCreateacc
         '
         Me.btnCreateacc.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnCreateacc.Location = New System.Drawing.Point(403, 28)
+        Me.btnCreateacc.Location = New System.Drawing.Point(392, 33)
         Me.btnCreateacc.Name = "btnCreateacc"
         Me.btnCreateacc.Size = New System.Drawing.Size(87, 31)
         Me.btnCreateacc.TabIndex = 15
@@ -56,7 +56,7 @@ Partial Class Manage_User
         'btnUpdateacc
         '
         Me.btnUpdateacc.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnUpdateacc.Location = New System.Drawing.Point(496, 28)
+        Me.btnUpdateacc.Location = New System.Drawing.Point(485, 33)
         Me.btnUpdateacc.Name = "btnUpdateacc"
         Me.btnUpdateacc.Size = New System.Drawing.Size(87, 31)
         Me.btnUpdateacc.TabIndex = 16
@@ -66,7 +66,7 @@ Partial Class Manage_User
         'btnDelacc
         '
         Me.btnDelacc.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnDelacc.Location = New System.Drawing.Point(589, 28)
+        Me.btnDelacc.Location = New System.Drawing.Point(578, 33)
         Me.btnDelacc.Name = "btnDelacc"
         Me.btnDelacc.Size = New System.Drawing.Size(87, 31)
         Me.btnDelacc.TabIndex = 17

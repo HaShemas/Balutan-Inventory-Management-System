@@ -7,11 +7,13 @@ Public Class Manage_User
     End Sub
 
     Private Sub btnCreateacc_Click(sender As Object, e As EventArgs) Handles btnCreateacc.Click
+        Create_Acc.btnupd.Visible = False
         Create_Acc.Show()
         Me.Close()
     End Sub
 
     Private Sub btnUpdateacc_Click(sender As Object, e As EventArgs) Handles btnUpdateacc.Click
+        Create_Acc.btncreate.Visible = False
         Create_Acc.Show()
         Me.Close()
     End Sub
@@ -38,5 +40,11 @@ Public Class Manage_User
     Private Sub btnbk_Click(sender As Object, e As EventArgs) Handles btnbk.Click
         Main.Show()
         Me.Close()
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim id As Integer
+        id = txtsID.Text
+        Search_User(id)
     End Sub
 End Class

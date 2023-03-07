@@ -102,6 +102,7 @@ Partial Class Login
         Me.Createlink.TabIndex = 6
         Me.Createlink.TabStop = True
         Me.Createlink.Text = "Create Account"
+        Me.Createlink.Visible = False
         '
         'PictureBox1
         '
@@ -123,7 +124,7 @@ Partial Class Login
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -138,7 +139,7 @@ Partial Class Login
         Me.Controls.Add(Me.txtuser)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.text)
-        Me.Name = "Form1"
+        Me.Name = "Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -30,8 +30,9 @@ Public Class Main
     End Sub
 
     Private Sub btnproduct_Click(sender As Object, e As EventArgs) Handles btnproduct.Click
-        AllData.dgvRecords2.ReadOnly = True
-        AllData.Show()
+        Product.Show()
+        'AllData.dgvRecords2.ReadOnly = True
+        'AllData.Show()
         Me.Close()
     End Sub
 

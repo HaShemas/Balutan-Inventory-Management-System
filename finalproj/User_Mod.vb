@@ -101,7 +101,7 @@ Module User_Mod
             Dim status As Integer = CInt(cmd.ExecuteScalar())
             If status = 0 Then
 
-                MessageBox.Show("Wrong")
+                MessageBox.Show("Invalid username or password!")
                 Login.txtuser.Clear()
                 Login.txtpass.Clear()
 
@@ -135,7 +135,7 @@ Module User_Mod
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("INSERT INTO user_tbl VALUES (null,'" & user & "', '" & pass & "', '" & fname & "', '" & lname & "', " & cbtype & ")", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("INSERT INTO user_tbl VALUES (null,'" & fname & "', '" & lname & "', '" & user & "', '" & pass & "', " & cbtype & ")", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "user_tbl")
 
@@ -237,6 +237,27 @@ Module User_Mod
 
         End Try
 
+    End Sub
+    Public Sub Search_User(ByVal id As Integer)
+        Try
+
+            MySQL_Open_Connection()
+
+            dataSet = New DataSet
+
+            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM `user_tbl` WHERE user_id =" & id & "", mysqlConn)
+
+            mysqlAdapter.Fill(dataSet, "user_tbl")
+
+            ' MessageBox.Show("Inserted")
+
+            Manage_User.dgvRecords4.DataSource = dataSet.Tables(0)
+
+        Catch ex As Exception
+
+            MessageBox.Show(ex.Message)
+
+        End Try
     End Sub
 End Module
 

@@ -18,6 +18,7 @@ Public Class Login
 
     Private Sub Createlink_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Createlink.LinkClicked
         Create_Acc.Show()
+        Create_Acc.btnupd.Visible = False
         Me.Hide()
         txtuser.Clear()
         txtpass.Clear()

@@ -64,7 +64,7 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET status = 'Inactive' WHERE product_id=" & id & "", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET status = 'Disabled' WHERE product_id=" & id & "", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -96,16 +96,20 @@ Module Module2
 
 
             'Form4.dgvRecords.DataSource = dataSet.Tables(0)
-            Dim username, password As String
-            username = Login.txtuser.Text
-            password = Login.txtpass.Text
-            command = New MySqlCommand("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
-            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.user_id = product_tbl.user_id AND user_tbl.username=@username AND 
-            user_tbl.password=@password AND status='Active'", mysqlConn)
+            'Dim username, password As String
+            'username = Login.txtuser.Text
+            'password = Login.txtpass.Text
+            'command = New MySqlCommand("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
+            'user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE user_tbl.user_id = product_tbl.user_id AND user_tbl.username=@username AND 
+            'user_tbl.password=@password AND status='Active' OR status='Inactive'", mysqlConn)
 
-            command.Parameters.AddWithValue("@username", username)
-            command.Parameters.AddWithValue("@password", password)
-            mysqlAdapter = New MySqlDataAdapter(command)
+            'command.Parameters.AddWithValue("@username", username)
+            'command.Parameters.AddWithValue("@password", password)
+            'mysqlAdapter = New MySqlDataAdapter(command)
+            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
+            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE status='Active' OR status='Inactive'", mysqlConn)
+
+
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
             Product.dgvRecords.DataSource = dataSet.Tables(0)
@@ -114,7 +118,7 @@ Module Module2
 
             ' Close the database connection and cleanup resources
             mysqlAdapter.Dispose()
-            command.Dispose()
+            'command.Dispose()
             MySQL_Close_Connection()
         Catch ex As Exception
 

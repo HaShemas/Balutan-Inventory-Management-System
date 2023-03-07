@@ -49,7 +49,7 @@ Partial Class AllData
         Me.dgvRecords2.Name = "dgvRecords2"
         Me.dgvRecords2.RowTemplate.Height = 25
         Me.dgvRecords2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRecords2.Size = New System.Drawing.Size(764, 279)
+        Me.dgvRecords2.Size = New System.Drawing.Size(1151, 279)
         Me.dgvRecords2.TabIndex = 13
         '
         'Label1
@@ -96,7 +96,7 @@ Partial Class AllData
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1191, 450)
         Me.Controls.Add(Me.btnrep)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

@@ -160,7 +160,7 @@ Partial Class Main
         '
         Me.lblutype.AutoSize = True
         Me.lblutype.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblutype.Location = New System.Drawing.Point(42, 176)
+        Me.lblutype.Location = New System.Drawing.Point(25, 176)
         Me.lblutype.Name = "lblutype"
         Me.lblutype.Size = New System.Drawing.Size(58, 17)
         Me.lblutype.TabIndex = 13

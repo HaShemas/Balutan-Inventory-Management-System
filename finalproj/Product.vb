@@ -3,6 +3,7 @@
 Public Class Product
 
     Public Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
+        Create_Prod.btnupd.Visible = False
         Create_Prod.Show()
         Me.Close()
         'Me.Refresh()
@@ -10,6 +11,7 @@ Public Class Product
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Create_Prod.btncreate.Visible = False
         Create_Prod.txtsku.ReadOnly = True
         Create_Prod.Show()
         Me.Close()
@@ -58,6 +60,7 @@ Public Class Product
 
     Private Sub btnvall_Click(sender As Object, e As EventArgs) Handles btnvall.Click
         AllData.Show()
+        AllData.dgvRecords2.ReadOnly = True
         Me.Hide()
     End Sub
 
