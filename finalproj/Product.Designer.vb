@@ -41,7 +41,7 @@ Partial Class Product
         Me.dgvRecords.Name = "dgvRecords"
         Me.dgvRecords.RowTemplate.Height = 25
         Me.dgvRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRecords.Size = New System.Drawing.Size(1049, 279)
+        Me.dgvRecords.Size = New System.Drawing.Size(956, 279)
         Me.dgvRecords.TabIndex = 12
         '
         'btnSearch
@@ -57,7 +57,7 @@ Partial Class Product
         'btnCreate
         '
         Me.btnCreate.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnCreate.Location = New System.Drawing.Point(803, 38)
+        Me.btnCreate.Location = New System.Drawing.Point(710, 38)
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.Size = New System.Drawing.Size(87, 31)
         Me.btnCreate.TabIndex = 14
@@ -67,7 +67,7 @@ Partial Class Product
         'btnUpdate
         '
         Me.btnUpdate.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnUpdate.Location = New System.Drawing.Point(896, 38)
+        Me.btnUpdate.Location = New System.Drawing.Point(803, 38)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(87, 31)
         Me.btnUpdate.TabIndex = 15
@@ -77,7 +77,7 @@ Partial Class Product
         'btnDelete
         '
         Me.btnDelete.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnDelete.Location = New System.Drawing.Point(989, 38)
+        Me.btnDelete.Location = New System.Drawing.Point(896, 38)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(87, 31)
         Me.btnDelete.TabIndex = 16
@@ -87,7 +87,7 @@ Partial Class Product
         'BtnLog
         '
         Me.BtnLog.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BtnLog.Location = New System.Drawing.Point(989, 374)
+        Me.BtnLog.Location = New System.Drawing.Point(896, 363)
         Me.BtnLog.Name = "BtnLog"
         Me.BtnLog.Size = New System.Drawing.Size(87, 32)
         Me.BtnLog.TabIndex = 17
@@ -116,7 +116,7 @@ Partial Class Product
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.ClientSize = New System.Drawing.Size(1091, 423)
+        Me.ClientSize = New System.Drawing.Size(1009, 423)
         Me.Controls.Add(Me.btnvall)
         Me.Controls.Add(Me.txtsID)
         Me.Controls.Add(Me.BtnLog)

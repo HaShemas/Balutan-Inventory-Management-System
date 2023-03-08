@@ -55,7 +55,7 @@ Partial Class AllData
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(275, 30)
+        Me.Label1.Location = New System.Drawing.Point(477, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(244, 43)
         Me.Label1.TabIndex = 14
@@ -74,7 +74,7 @@ Partial Class AllData
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(702, 405)
+        Me.Button2.Location = New System.Drawing.Point(1089, 405)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(74, 33)
         Me.Button2.TabIndex = 16
@@ -84,7 +84,7 @@ Partial Class AllData
         'btnrep
         '
         Me.btnrep.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnrep.Location = New System.Drawing.Point(702, 53)
+        Me.btnrep.Location = New System.Drawing.Point(1089, 53)
         Me.btnrep.Name = "btnrep"
         Me.btnrep.Size = New System.Drawing.Size(74, 33)
         Me.btnrep.TabIndex = 17

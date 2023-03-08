@@ -5,7 +5,7 @@ Module Module2
     Dim mysqlAdapter As MySqlDataAdapter
 
     Dim dataSet As DataSet
-    Dim command As MySqlCommand
+
 
     Dim table As New DataTable()
 
@@ -43,7 +43,7 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET pname='" & pname & "',des='" & des & "',des='" & sku & "', price=" & sprice & ",cost=" & cost & ", category='" & cat & "', type='" & intype & "', status='" & stats & "' WHERE product_id=" & usid & "", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET pname='" & pname & "',des='" & des & "',sku='" & sku & "', price=" & sprice & ",cost=" & cost & ", category='" & cat & "', type='" & intype & "', status='" & stats & "' WHERE product_id=" & usid & "", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -106,13 +106,15 @@ Module Module2
             'command.Parameters.AddWithValue("@username", username)
             'command.Parameters.AddWithValue("@password", password)
             'mysqlAdapter = New MySqlDataAdapter(command)
-            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status,product_tbl.user_id FROM product_tbl INNER JOIN
-            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE status='Active' OR status='Inactive'", mysqlConn)
 
+            'mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status FROM product_tbl INNER JOIN
+            'user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE status='Active' OR status='Inactive'", mysqlConn)
 
-            mysqlAdapter.Fill(dataSet, "product_tbl")
+            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM display_data", mysqlConn)
+            mysqlAdapter.Fill(dataSet, "display_data")
+            Product.dgvRecords.DataSource = dataSet.Tables("display_data")
 
-            Product.dgvRecords.DataSource = dataSet.Tables(0)
+            'Product.dgvRecords.DataSource = dataSet.Tables(0)
             ' Display the results in the form
 
 
@@ -120,6 +122,11 @@ Module Module2
             mysqlAdapter.Dispose()
             'command.Dispose()
             MySQL_Close_Connection()
+
+
+
+
+
         Catch ex As Exception
 
             MessageBox.Show(ex.Message)
@@ -135,7 +142,8 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM `product_tbl` WHERE product_id =" & id & "", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status FROM product_tbl INNER JOIN
+            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE product_id =" & id & "", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -155,16 +163,26 @@ Module Module2
 
             MySQL_Open_Connection()
 
-            dataSet = New DataSet
+            'dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.*,user_tbl.username FROM `product_tbl` INNER JOIN user_tbl ON product_tbl.user_id = user_tbl.user_id ", mysqlConn)
+            'mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.*,user_tbl.username FROM `product_tbl` INNER JOIN user_tbl ON product_tbl.user_id = user_tbl.user_id ", mysqlConn)
 
-            mysqlAdapter.Fill(dataSet, "product_tbl")
+            'mysqlAdapter.Fill(dataSet, "product_tbl")
 
-            ' MessageBox.Show("Inserted")
+            '' MessageBox.Show("Inserted")
 
-            AllData.dgvRecords2.DataSource = dataSet.Tables(0)
+            'AllData.dgvRecords2.DataSource = dataSet.Tables(0)
+            Dim command As MySqlCommand = New MySqlCommand("All_Products", mysqlConn)
 
+            command.CommandType = CommandType.StoredProcedure
+            Dim ada As MySqlDataAdapter = New MySqlDataAdapter(command)
+            Dim dt As New DataTable()
+            ada.Fill(dt)
+            'Dim reader As MySqlDataReader = command.ExecuteReader()
+            AllData.dgvRecords2.DataSource = dt
+            'reader.Close()
+            command.Dispose()
+            MySQL_Close_Connection()
         Catch ex As Exception
 
             MessageBox.Show(ex.Message)

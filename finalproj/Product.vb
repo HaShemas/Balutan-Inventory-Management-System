@@ -37,7 +37,7 @@ Public Class Product
         Create_Prod.cmbcat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(6).Value
         Create_Prod.cmbintype.SelectedItem = dgvRecords.Rows(rowIndex).Cells(7).Value
         Create_Prod.cmbstat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(8).Value
-        Create_Prod.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(9).Value
+        'Create_Prod.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(9).Value
 
     End Sub
 
@@ -61,7 +61,7 @@ Public Class Product
     Private Sub btnvall_Click(sender As Object, e As EventArgs) Handles btnvall.Click
         AllData.Show()
         AllData.dgvRecords2.ReadOnly = True
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub BtnLog_Click(sender As Object, e As EventArgs) Handles BtnLog.Click

@@ -14,6 +14,7 @@ Public Class Manage_User
 
     Private Sub btnUpdateacc_Click(sender As Object, e As EventArgs) Handles btnUpdateacc.Click
         Create_Acc.btncreate.Visible = False
+        Create_Acc.txtuser.ReadOnly = True
         Create_Acc.Show()
         Me.Close()
     End Sub
