@@ -88,7 +88,7 @@ Partial Class Create_Prod
         Me.cmbstat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbstat.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbstat.FormattingEnabled = True
-        Me.cmbstat.Items.AddRange(New Object() {"Active", "Inactive", "Disabled"})
+        Me.cmbstat.Items.AddRange(New Object() {"Active", "Inactive"})
         Me.cmbstat.Location = New System.Drawing.Point(53, 304)
         Me.cmbstat.Name = "cmbstat"
         Me.cmbstat.Size = New System.Drawing.Size(180, 27)
@@ -99,7 +99,7 @@ Partial Class Create_Prod
         Me.cmbintype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbintype.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbintype.FormattingEnabled = True
-        Me.cmbintype.Items.AddRange(New Object() {"Inventory", "Service"})
+        Me.cmbintype.Items.AddRange(New Object() {"Inventory", "Stock"})
         Me.cmbintype.Location = New System.Drawing.Point(53, 250)
         Me.cmbintype.Name = "cmbintype"
         Me.cmbintype.Size = New System.Drawing.Size(180, 27)

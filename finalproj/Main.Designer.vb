@@ -42,17 +42,17 @@ Partial Class Main
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(172, 9)
+        Me.Label1.Location = New System.Drawing.Point(158, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(158, 71)
+        Me.Label1.Size = New System.Drawing.Size(280, 45)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "HELLO AND WELCOME"
+        Me.Label1.Text = "HELLO AND WELCOME!"
         '
         'lbluser
         '
         Me.lbluser.AutoSize = True
         Me.lbluser.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbluser.Location = New System.Drawing.Point(44, 159)
+        Me.lbluser.Location = New System.Drawing.Point(42, 159)
         Me.lbluser.Name = "lbluser"
         Me.lbluser.Size = New System.Drawing.Size(65, 17)
         Me.lbluser.TabIndex = 1
@@ -71,7 +71,7 @@ Partial Class Main
         'btnproduct
         '
         Me.btnproduct.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnproduct.Location = New System.Drawing.Point(25, 196)
+        Me.btnproduct.Location = New System.Drawing.Point(32, 196)
         Me.btnproduct.Name = "btnproduct"
         Me.btnproduct.Size = New System.Drawing.Size(75, 36)
         Me.btnproduct.TabIndex = 3
@@ -81,7 +81,7 @@ Partial Class Main
         'btnlogout
         '
         Me.btnlogout.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnlogout.Location = New System.Drawing.Point(25, 288)
+        Me.btnlogout.Location = New System.Drawing.Point(32, 288)
         Me.btnlogout.Name = "btnlogout"
         Me.btnlogout.Size = New System.Drawing.Size(75, 31)
         Me.btnlogout.TabIndex = 4
@@ -92,7 +92,7 @@ Partial Class Main
         '
         Me.txtdate.AutoSize = True
         Me.txtdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtdate.Location = New System.Drawing.Point(249, 144)
+        Me.txtdate.Location = New System.Drawing.Point(350, 144)
         Me.txtdate.Name = "txtdate"
         Me.txtdate.Size = New System.Drawing.Size(37, 17)
         Me.txtdate.TabIndex = 5
@@ -101,7 +101,7 @@ Partial Class Main
         'btnmacc
         '
         Me.btnmacc.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnmacc.Location = New System.Drawing.Point(25, 238)
+        Me.btnmacc.Location = New System.Drawing.Point(32, 238)
         Me.btnmacc.Name = "btnmacc"
         Me.btnmacc.Size = New System.Drawing.Size(75, 44)
         Me.btnmacc.TabIndex = 6
@@ -112,7 +112,7 @@ Partial Class Main
         '
         Me.lblfname.AutoSize = True
         Me.lblfname.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblfname.Location = New System.Drawing.Point(185, 96)
+        Me.lblfname.Location = New System.Drawing.Point(247, 54)
         Me.lblfname.Name = "lblfname"
         Me.lblfname.Size = New System.Drawing.Size(55, 21)
         Me.lblfname.TabIndex = 7
@@ -122,7 +122,7 @@ Partial Class Main
         '
         Me.lbllname.AutoSize = True
         Me.lbllname.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbllname.Location = New System.Drawing.Point(233, 96)
+        Me.lbllname.Location = New System.Drawing.Point(295, 54)
         Me.lbllname.Name = "lbllname"
         Me.lbllname.Size = New System.Drawing.Size(53, 21)
         Me.lbllname.TabIndex = 8
@@ -132,7 +132,7 @@ Partial Class Main
         '
         Me.lblID.AutoSize = True
         Me.lblID.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblID.Location = New System.Drawing.Point(51, 142)
+        Me.lblID.Location = New System.Drawing.Point(58, 142)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(49, 17)
         Me.lblID.TabIndex = 9
@@ -160,7 +160,7 @@ Partial Class Main
         '
         Me.lblutype.AutoSize = True
         Me.lblutype.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblutype.Location = New System.Drawing.Point(25, 176)
+        Me.lblutype.Location = New System.Drawing.Point(42, 176)
         Me.lblutype.Name = "lblutype"
         Me.lblutype.Size = New System.Drawing.Size(58, 17)
         Me.lblutype.TabIndex = 13
@@ -171,7 +171,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.ClientSize = New System.Drawing.Size(356, 331)
+        Me.ClientSize = New System.Drawing.Size(463, 331)
         Me.Controls.Add(Me.lblutype)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label10)

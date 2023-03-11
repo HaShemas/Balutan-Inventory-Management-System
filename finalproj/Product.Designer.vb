@@ -30,6 +30,7 @@ Partial Class Product
         Me.BtnLog = New System.Windows.Forms.Button()
         Me.txtsID = New System.Windows.Forms.TextBox()
         Me.btnvall = New System.Windows.Forms.Button()
+        Me.btnclear = New System.Windows.Forms.Button()
         CType(Me.dgvRecords, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,12 +112,23 @@ Partial Class Product
         Me.btnvall.Text = "View All"
         Me.btnvall.UseVisualStyleBackColor = True
         '
+        'btnclear
+        '
+        Me.btnclear.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnclear.Location = New System.Drawing.Point(346, 41)
+        Me.btnclear.Name = "btnclear"
+        Me.btnclear.Size = New System.Drawing.Size(87, 31)
+        Me.btnclear.TabIndex = 20
+        Me.btnclear.Text = "Clear"
+        Me.btnclear.UseVisualStyleBackColor = True
+        '
         'Product
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(1009, 423)
+        Me.Controls.Add(Me.btnclear)
         Me.Controls.Add(Me.btnvall)
         Me.Controls.Add(Me.txtsID)
         Me.Controls.Add(Me.BtnLog)
@@ -141,4 +153,5 @@ Partial Class Product
     Friend WithEvents BtnLog As Button
     Friend WithEvents txtsID As TextBox
     Friend WithEvents btnvall As Button
+    Friend WithEvents btnclear As Button
 End Class

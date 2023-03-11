@@ -196,7 +196,7 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT `pname`,`cost`,`price` FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT `pname`,`cost`,`price`,`status` FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 

@@ -7,7 +7,8 @@ Public Class Product
         Create_Prod.Show()
         Me.Close()
         'Me.Refresh()
-
+        'dgvRecords.AllowUserToAddRows = True
+        dgvRecords.AllowUserToAddRows = False
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -39,6 +40,8 @@ Public Class Product
         Create_Prod.cmbstat.SelectedItem = dgvRecords.Rows(rowIndex).Cells(8).Value
         'Create_Prod.txtusID.Text = dgvRecords.Rows(rowIndex).Cells(9).Value
 
+
+
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
@@ -52,6 +55,7 @@ Public Class Product
         Dim id As Integer
         id = txtsID.Text
         Display_Search(id)
+
     End Sub
 
     Private Sub dgvRecords_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRecords.CellContentClick
@@ -61,6 +65,7 @@ Public Class Product
     Private Sub btnvall_Click(sender As Object, e As EventArgs) Handles btnvall.Click
         AllData.Show()
         AllData.dgvRecords2.ReadOnly = True
+        AllData.dgvRecords2.AllowUserToAddRows = False
         Me.Close()
     End Sub
 
@@ -71,5 +76,10 @@ Public Class Product
         Me.Close()
         MessageBox.Show("Logged Out Successfully!")
 
+    End Sub
+
+    Private Sub btnclear_Click(sender As Object, e As EventArgs) Handles btnclear.Click
+        Display_Data()
+        txtsID.Clear()
     End Sub
 End Class

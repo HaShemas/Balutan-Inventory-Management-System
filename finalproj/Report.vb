@@ -13,5 +13,6 @@
     Private Sub btnbk_Click(sender As Object, e As EventArgs) Handles btnbk.Click
         AllData.Show()
         Me.Close()
+        AllData.dgvRecords2.AllowUserToAddRows = False
     End Sub
 End Class

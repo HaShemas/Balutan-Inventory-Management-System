@@ -2,6 +2,7 @@
     Private Sub btnmanage_Click(sender As Object, e As EventArgs) Handles btnmanage.Click
         Product.Show()
         Me.Close()
+        Product.dgvRecords.AllowUserToAddRows = False
     End Sub
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,5 +27,7 @@
     Private Sub btnrep_Click(sender As Object, e As EventArgs) Handles btnrep.Click
         Report.Show()
         Me.Hide()
+        'dgvRecords2.AllowUserToAddRows = False
+        Report.dgvRecords3.AllowUserToAddRows = False
     End Sub
 End Class

@@ -29,6 +29,7 @@ Public Class Create_Prod
         cmbcat.SelectedIndex = -1
         cmbintype.SelectedIndex = -1
         cmbstat.SelectedIndex = -1
+        Product.dgvRecords.AllowUserToAddRows = False
     End Sub
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
@@ -53,6 +54,7 @@ Public Class Create_Prod
         Update_Data(pname, des, sku, sprice, cost, cat, intype, stats, pid)
         Product.Show()
         Me.Close()
+        Product.dgvRecords.AllowUserToAddRows = False
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
