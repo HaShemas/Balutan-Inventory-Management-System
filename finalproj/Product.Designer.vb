@@ -36,6 +36,7 @@ Partial Class Product
         '
         'dgvRecords
         '
+        Me.dgvRecords.AllowUserToAddRows = False
         Me.dgvRecords.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRecords.Location = New System.Drawing.Point(27, 78)
@@ -48,17 +49,17 @@ Partial Class Product
         'btnSearch
         '
         Me.btnSearch.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnSearch.Location = New System.Drawing.Point(28, 41)
+        Me.btnSearch.Location = New System.Drawing.Point(24, 29)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(87, 31)
         Me.btnSearch.TabIndex = 13
-        Me.btnSearch.Text = "Search"
+        Me.btnSearch.Text = "Search ID"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
         'btnCreate
         '
         Me.btnCreate.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnCreate.Location = New System.Drawing.Point(710, 38)
+        Me.btnCreate.Location = New System.Drawing.Point(706, 26)
         Me.btnCreate.Name = "btnCreate"
         Me.btnCreate.Size = New System.Drawing.Size(87, 31)
         Me.btnCreate.TabIndex = 14
@@ -68,7 +69,7 @@ Partial Class Product
         'btnUpdate
         '
         Me.btnUpdate.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnUpdate.Location = New System.Drawing.Point(803, 38)
+        Me.btnUpdate.Location = New System.Drawing.Point(799, 26)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(87, 31)
         Me.btnUpdate.TabIndex = 15
@@ -78,7 +79,7 @@ Partial Class Product
         'btnDelete
         '
         Me.btnDelete.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnDelete.Location = New System.Drawing.Point(896, 38)
+        Me.btnDelete.Location = New System.Drawing.Point(892, 26)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(87, 31)
         Me.btnDelete.TabIndex = 16
@@ -97,7 +98,7 @@ Partial Class Product
         '
         'txtsID
         '
-        Me.txtsID.Location = New System.Drawing.Point(121, 46)
+        Me.txtsID.Location = New System.Drawing.Point(117, 34)
         Me.txtsID.Name = "txtsID"
         Me.txtsID.Size = New System.Drawing.Size(204, 23)
         Me.txtsID.TabIndex = 18
@@ -115,7 +116,7 @@ Partial Class Product
         'btnclear
         '
         Me.btnclear.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnclear.Location = New System.Drawing.Point(346, 41)
+        Me.btnclear.Location = New System.Drawing.Point(342, 29)
         Me.btnclear.Name = "btnclear"
         Me.btnclear.Size = New System.Drawing.Size(87, 31)
         Me.btnclear.TabIndex = 20

@@ -22,7 +22,7 @@ Module Module2
 
             mysqlAdapter = New MySqlDataAdapter("INSERT INTO product_tbl VALUES (null,'" & pname & "', '" & des & "', '" & sku & "', " & sprice & ", " & cost & ", '" & cat & "', '" & intype & "', '" & stats & "', " & usid & " )", mysqlConn)
 
-
+            'mysqlAdapter = New MySqlDataAdapter("INSERT INTO `product_tbl`(`product_id`, `pname`, `des`, `sku`, `price`, `cost`, `category`, `type`, `status`, `user_id`) SELECT null AS product_id, '" & pname & "' AS pname, '" & des & "' AS des, " & sku & " AS sku, " & sprice & " AS price, " & cost & " AS cost, '" & cat & "' AS category, '" & intype & "' AS type, '" & stats & "' AS status, " & usid & " AS user_id FROM user_tbl WHERE user_id IN(SELECT user_id FROM product_tbl))", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -43,7 +43,7 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl SET pname='" & pname & "',des='" & des & "',sku='" & sku & "', price=" & sprice & ",cost=" & cost & ", category='" & cat & "', type='" & intype & "', status='" & stats & "' WHERE product_id=" & usid & "", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("UPDATE product_tbl Set pname='" & pname & "',des='" & des & "',sku='" & sku & "', price=" & sprice & ",cost=" & cost & ", category='" & cat & "', type='" & intype & "', status='" & stats & "' WHERE product_id=" & usid & "", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -142,8 +142,9 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id,product_tbl.pname,product_tbl.des,product_tbl.sku,product_tbl.price,product_tbl.cost,product_tbl.category,product_tbl.type,product_tbl.status FROM product_tbl INNER JOIN
-            user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE product_id =" & id & "", mysqlConn)
+            'mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id AS 'ID',product_tbl.pname AS 'Product Name',product_tbl.des AS 'Description',product_tbl.sku AS 'SKU',product_tbl.price AS 'Price',product_tbl.cost AS 'Cost',product_tbl.category AS 'Category',product_tbl.type AS 'Type',product_tbl.status AS 'Status' FROM product_tbl INNER JOIN user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE product_id =" & id & "", mysqlConn)
+
+            mysqlAdapter = New MySqlDataAdapter("SELECT product_tbl.product_id AS 'ID',product_tbl.pname AS 'Product Name',product_tbl.des AS 'Description',product_tbl.sku AS 'SKU',product_tbl.price AS 'Price',product_tbl.cost AS 'Cost',product_tbl.category AS 'Category',product_tbl.type AS 'Type',product_tbl.status AS 'Status' FROM product_tbl INNER JOIN user_tbl ON product_tbl.user_id = user_tbl.user_id WHERE product_id =" & id & " AND product_tbl.status NOT IN('Disabled')", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -196,7 +197,7 @@ Module Module2
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT `pname`,`cost`,`price`,`status` FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT `pname` AS 'Product Name',`cost` AS 'Cost',`price` AS 'Price',`status` AS 'Status' FROM `product_tbl` WHERE category='" & cat & "'", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "product_tbl")
 
@@ -210,4 +211,5 @@ Module Module2
 
         End Try
     End Sub
+
 End Module

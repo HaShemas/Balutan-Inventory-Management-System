@@ -42,7 +42,7 @@ Partial Class Main
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(158, 9)
+        Me.Label1.Location = New System.Drawing.Point(171, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(280, 45)
         Me.Label1.TabIndex = 0
@@ -62,7 +62,7 @@ Partial Class Main
         '
         Me.txtTime.AutoSize = True
         Me.txtTime.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtTime.Location = New System.Drawing.Point(147, 144)
+        Me.txtTime.Location = New System.Drawing.Point(160, 144)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.Size = New System.Drawing.Size(37, 17)
         Me.txtTime.TabIndex = 2
@@ -92,7 +92,7 @@ Partial Class Main
         '
         Me.txtdate.AutoSize = True
         Me.txtdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtdate.Location = New System.Drawing.Point(350, 144)
+        Me.txtdate.Location = New System.Drawing.Point(363, 144)
         Me.txtdate.Name = "txtdate"
         Me.txtdate.Size = New System.Drawing.Size(37, 17)
         Me.txtdate.TabIndex = 5
@@ -112,7 +112,7 @@ Partial Class Main
         '
         Me.lblfname.AutoSize = True
         Me.lblfname.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblfname.Location = New System.Drawing.Point(247, 54)
+        Me.lblfname.Location = New System.Drawing.Point(260, 54)
         Me.lblfname.Name = "lblfname"
         Me.lblfname.Size = New System.Drawing.Size(55, 21)
         Me.lblfname.TabIndex = 7
@@ -122,7 +122,7 @@ Partial Class Main
         '
         Me.lbllname.AutoSize = True
         Me.lbllname.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbllname.Location = New System.Drawing.Point(295, 54)
+        Me.lbllname.Location = New System.Drawing.Point(308, 54)
         Me.lbllname.Name = "lbllname"
         Me.lbllname.Size = New System.Drawing.Size(53, 21)
         Me.lbllname.TabIndex = 8
@@ -141,7 +141,7 @@ Partial Class Main
         'Label10
         '
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label10.Location = New System.Drawing.Point(136, 0)
+        Me.Label10.Location = New System.Drawing.Point(149, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(5, 331)
         Me.Label10.TabIndex = 11
@@ -160,7 +160,7 @@ Partial Class Main
         '
         Me.lblutype.AutoSize = True
         Me.lblutype.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblutype.Location = New System.Drawing.Point(42, 176)
+        Me.lblutype.Location = New System.Drawing.Point(32, 176)
         Me.lblutype.Name = "lblutype"
         Me.lblutype.Size = New System.Drawing.Size(58, 17)
         Me.lblutype.TabIndex = 13

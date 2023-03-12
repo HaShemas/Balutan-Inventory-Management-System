@@ -15,6 +15,7 @@ Public Class Manage_User
     Private Sub btnUpdateacc_Click(sender As Object, e As EventArgs) Handles btnUpdateacc.Click
         Create_Acc.btncreate.Visible = False
         Create_Acc.txtuser.ReadOnly = True
+        Create_Acc.btnupd.Visible = True
         Create_Acc.Show()
         Me.Close()
     End Sub
@@ -47,5 +48,10 @@ Public Class Manage_User
         Dim id As Integer
         id = txtsID.Text
         Search_User(id)
+    End Sub
+
+    Private Sub btnclr_Click(sender As Object, e As EventArgs) Handles btnclr.Click
+        Display_AllUsers()
+        txtsID.Clear()
     End Sub
 End Class

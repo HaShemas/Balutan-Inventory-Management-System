@@ -33,8 +33,11 @@ Public Class Create_Prod
     End Sub
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+
         Product.Show()
         Me.Close()
+
+
     End Sub
 
     Private Sub btnupd_Click(sender As Object, e As EventArgs) Handles btnupd.Click

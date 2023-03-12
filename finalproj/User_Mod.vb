@@ -33,7 +33,7 @@ Module User_Mod
 
                 mysqlConn.Open()
 
-                MessageBox.Show("Connected")
+                'MessageBox.Show("Connected")
 
             End If
 
@@ -183,7 +183,7 @@ Module User_Mod
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM user_tbl WHERE usertype_id > 0", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT user_tbl.user_id AS 'User ID',user_tbl.username AS 'Username',user_tbl.password AS 'Password',user_tbl.fname AS 'First Name',user_tbl.lname AS 'Last Name',user_tbl.usertype_id AS 'Usertype ID', usertype_tbl.type AS 'Type' FROM user_tbl INNER JOIN usertype_tbl ON user_tbl.usertype_id = usertype_tbl.usertype_id", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "user_tbl")
 
@@ -245,7 +245,7 @@ Module User_Mod
 
             dataSet = New DataSet
 
-            mysqlAdapter = New MySqlDataAdapter("SELECT * FROM `user_tbl` WHERE user_id =" & id & "", mysqlConn)
+            mysqlAdapter = New MySqlDataAdapter("SELECT user_tbl.user_id AS 'User ID',user_tbl.username AS 'Username',user_tbl.password AS 'Password',user_tbl.fname AS 'First Name',user_tbl.lname AS 'Last Name',user_tbl.usertype_id AS 'Usertype ID', usertype_tbl.type AS 'Type' FROM user_tbl INNER JOIN usertype_tbl ON user_tbl.usertype_id = usertype_tbl.usertype_id WHERE user_id =" & id & "", mysqlConn)
 
             mysqlAdapter.Fill(dataSet, "user_tbl")
 
@@ -258,6 +258,30 @@ Module User_Mod
             MessageBox.Show(ex.Message)
 
         End Try
+    End Sub
+    Public Sub Ret_ID()
+        MySQL_Open_Connection()
+        Dim username As String
+        username = Login.txtuser.Text
+        Dim query As String = "SELECT `user_id` FROM `user_tbl` WHERE username='" & username & "'"
+        Dim command As New MySqlCommand(query, mysqlConn)
+        Dim reader As MySqlDataReader = command.ExecuteReader()
+
+        ' If the query returns data, assign it to the label control
+        If reader.HasRows AndAlso reader.Read() Then
+            Dim userId As Integer = reader.GetInt32(0)
+            Create_Prod.txtusID.Text = userId.ToString()
+            'Form3.lblID.Text = Form5.txtusID.Text
+
+            Create_Prod.txtusID.Text = reader.GetInt16("user_id")
+
+
+        End If
+
+        ' Close the connection and dispose of any resources used
+        reader.Close()
+        command.Dispose()
+        MySQL_Close_Connection()
     End Sub
 End Module
 

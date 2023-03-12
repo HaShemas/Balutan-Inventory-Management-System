@@ -1,20 +1,26 @@
 ﻿
 
+Imports MySql.Data.MySqlClient
+
 Public Class Product
 
     Public Sub btnCreate_Click(sender As Object, e As EventArgs) Handles btnCreate.Click
         Create_Prod.btnupd.Visible = False
         Create_Prod.Show()
+        Ret_ID()
         Me.Close()
+
         'Me.Refresh()
         'dgvRecords.AllowUserToAddRows = True
         dgvRecords.AllowUserToAddRows = False
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        MySQL_Open_Connection()
         Create_Prod.btncreate.Visible = False
         Create_Prod.txtsku.ReadOnly = True
         Create_Prod.Show()
+        Create_Prod.btnupd.Visible = True
         Me.Close()
         'Me.Refresh()
 
@@ -81,5 +87,6 @@ Public Class Product
     Private Sub btnclear_Click(sender As Object, e As EventArgs) Handles btnclear.Click
         Display_Data()
         txtsID.Clear()
+
     End Sub
 End Class
